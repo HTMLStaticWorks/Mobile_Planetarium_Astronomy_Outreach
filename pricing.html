@@ -31,16 +31,16 @@
 </head>
 <body class="transition-colors duration-300">
     <!-- Navbar (Identical) -->
-    <nav class="fixed top-0 w-full z-50 glass border-b border-white/10"><div class="max-w-7xl mx-auto px-4"><div class="flex items-center justify-between h-20"><div class="brand-container"><i class="fas fa-meteor brand-icon"></i><span class="brand-name">STELLAR</span></div><div class="hidden lg:flex items-center space-x-2"><a href="index.html" class="nav-link">Home1</a><a href="home2.html" class="nav-link">Home2</a><a href="about.html" class="nav-link">About</a><a href="programs.html" class="nav-link">Programs</a><a href="dome-shows.html" class="nav-link">Shows</a><a href="pricing.html" class="nav-link">Pricing</a><a href="blog.html" class="nav-link">Blog</a><a href="contact.html" class="nav-link">Contact</a></div><div class="hidden lg:flex items-center space-x-2"><button id="theme-toggle" class="p-2 hover:bg-white/10 rounded-full transition-colors"><i class="fas fa-sun text-accent-purple"></i></button><button id="rtl-toggle" class="p-2 hover:bg-white/10 rounded-full transition-colors text-sm font-bold">RTL</button><a href="login.html" class="btn-premium btn-primary rounded-full px-6 py-2">Login</a></div><div class="lg:hidden flex items-center gap-4"><button id="theme-toggle-mobile" class="p-2"><i class="fas fa-sun text-accent-purple"></i></button><button id="menu-btn" class="p-2 text-2xl"><i class="fas fa-bars"></i></button></div></div></div><div id="mobile-menu" class="hidden lg:hidden flex-col bg-space-900 border-t border-white/10 px-4 py-6 space-y-4"><a href="index.html" class="nav-link text-lg">Home1</a><a href="home2.html" class="nav-link text-lg">Home2</a><a href="about.html" class="nav-link text-lg">About</a><a href="programs.html" class="nav-link text-lg">Programs</a><a href="dome-shows.html" class="nav-link text-lg">Dome Shows</a><a href="pricing.html" class="nav-link text-lg">Pricing</a><a href="blog.html" class="nav-link text-lg">Blog</a><a href="contact.html" class="nav-link text-lg">Contact</a><div class="flex items-center gap-4 pt-4 border-t border-white/10"><a href="login.html" class="btn-premium btn-primary flex-1 text-center py-2">Login</a></div></div></nav>
+    <nav class="fixed top-0 w-full z-50 glass border-b border-white/10"><div class="max-w-7xl mx-auto px-4"><div class="flex items-center justify-between h-20"><a href="index.html" class="brand-container no-underline"><i class="fas fa-meteor brand-icon"></i><span class="brand-name">STELLAR</span></a><div class="hidden lg:flex items-center space-x-2"><a href="index.html" class="nav-link">Home1</a><a href="home2.html" class="nav-link">Home2</a><a href="about.html" class="nav-link">About</a><a href="programs.html" class="nav-link">Programs</a><a href="dome-shows.html" class="nav-link">Shows</a><a href="pricing.html" class="nav-link">Pricing</a><a href="blog.html" class="nav-link">Blog</a><a href="contact.html" class="nav-link">Contact</a></div><div class="hidden lg:flex items-center space-x-5"><button id="theme-toggle" class="p-2 hover:bg-white/10 rounded-full transition-colors"><i class="fas fa-sun text-accent-purple"></i></button><button id="rtl-toggle" class="p-2 hover:bg-white/10 rounded-full transition-colors text-sm font-bold">RTL</button><a href="login.html" class="btn-premium btn-primary rounded-full px-8 py-2">Login</a></div><div class="lg:hidden flex items-center gap-4"><button id="theme-toggle-mobile" class="p-2"><i class="fas fa-sun text-accent-purple"></i></button><button id="rtl-toggle-mobile" class="p-2 text-sm font-bold">RTL</button><button id="menu-btn" class="p-2 text-2xl"><i class="fas fa-bars"></i></button></div></div></div><div id="mobile-menu" class="hidden lg:hidden flex-col bg-space-900 border-t border-white/10 px-4 py-6 space-y-4"><a href="index.html" class="nav-link text-lg">Home1</a><a href="home2.html" class="nav-link text-lg">Home2</a><a href="about.html" class="nav-link text-lg">About</a><a href="programs.html" class="nav-link text-lg">Programs</a><a href="dome-shows.html" class="nav-link text-lg">Dome Shows</a><a href="pricing.html" class="nav-link text-lg">Pricing</a><a href="blog.html" class="nav-link text-lg">Blog</a><a href="contact.html" class="nav-link text-lg">Contact</a><div class="flex items-center gap-4 pt-4 border-t border-white/10"><a href="login.html" class="btn-premium btn-primary flex-1 text-center py-2">Login</a></div></div></nav>
 
     <!-- Hero Section -->
     <section class="relative h-[40vh] flex items-center justify-center pt-20">
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45?auto=format&fit=crop&q=80&w=2000" alt="Space" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-space-900/60"></div>
+            <div class="absolute inset-0 hero-overlay"></div>
         </div>
         <div class="relative z-10 text-center fade-up">
-            <h1 class="text-5xl font-extrabold mb-4 hero-title">Simple <span class="text-accent-purple">Pricing</span></h1>
+            <h1 class="text-5xl font-extrabold mb-4 hero-title">Simple <span>Pricing</span></h1>
             <p class="text-lg max-w-xl mx-auto hero-text">Transparent packages for schools, families, and events.</p>
         </div>
     </section>
@@ -49,7 +49,7 @@
     <section class="py-24">
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- Card 1 -->
-            <div class="glass p-8 rounded-3xl border border-white/5 hover:border-accent-purple transition-all fade-up">
+            <div class="glass p-8 rounded-3xl border border-white/5 hover:border-accent-purple transition-all fade-up flex flex-col h-full">
                 <h4 class="text-xl font-bold mb-2">School Assembly</h4>
                 <p class="text-slate-500 text-sm mb-6">Perfect for multiple grade levels.</p>
                 <div class="flex items-baseline mb-8">
@@ -61,10 +61,12 @@
                     <li><i class="fas fa-check text-accent-purple mr-2"></i>150 Students Total</li>
                     <li><i class="fas fa-check text-accent-purple mr-2"></i>Curriculum Resources</li>
                 </ul>
-                <button class="btn-premium btn-glass w-full py-4 text-lg">Select Plan</button>
+                <div class="mt-auto">
+                    <button class="btn-premium btn-glass w-full py-4 text-lg">Select Plan</button>
+                </div>
             </div>
             <!-- Card 2 -->
-            <div class="glass p-8 pt-12 rounded-3xl border-2 border-accent-purple relative fade-up" style="animation-delay: 0.1s;">
+            <div class="glass p-8 rounded-3xl border-2 border-accent-purple relative fade-up flex flex-col h-full" style="animation-delay: 0.1s;">
                 <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent-purple text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg shadow-purple-500/30">Popular</div>
                 <h4 class="text-xl font-bold mb-2">Birthday Package</h4>
                 <p class="text-slate-500 text-sm mb-6">Unforgettable private party.</p>
@@ -77,10 +79,12 @@
                     <li><i class="fas fa-check text-accent-purple mr-2"></i>Up to 25 Children</li>
                     <li><i class="fas fa-check text-accent-purple mr-2"></i>Space VR Included</li>
                 </ul>
-                <button class="w-full py-4 bg-accent-purple text-white rounded-2xl font-bold hover:scale-[1.02] transition-transform shadow-lg shadow-purple-500/20">Select Plan</button>
+                <div class="mt-auto">
+                    <button class="btn-premium btn-primary w-full py-4 block">Select Plan</button>
+                </div>
             </div>
             <!-- Card 3 -->
-            <div class="glass p-8 rounded-3xl border border-white/5 hover:border-accent-purple transition-all fade-up" style="animation-delay: 0.2s;">
+            <div class="glass p-8 rounded-3xl border border-white/5 hover:border-accent-purple transition-all fade-up flex flex-col h-full" style="animation-delay: 0.2s;">
                 <h4 class="text-xl font-bold mb-2">Telescope Add-on</h4>
                 <p class="text-slate-500 text-sm mb-6">Night sky observation.</p>
                 <div class="flex items-baseline mb-8">
@@ -92,10 +96,12 @@
                     <li><i class="fas fa-check text-accent-purple mr-2"></i>Live Expert Guided</li>
                     <li><i class="fas fa-check text-accent-purple mr-2"></i>Solar (Day) or Stars (Night)</li>
                 </ul>
-                <button class="btn-premium btn-glass w-full py-4 text-lg">Select Plan</button>
+                <div class="mt-auto">
+                    <button class="btn-premium btn-glass w-full py-4 text-lg">Select Plan</button>
+                </div>
             </div>
             <!-- Card 4 -->
-            <div class="glass p-8 rounded-3xl border border-white/5 hover:border-accent-purple transition-all fade-up" style="animation-delay: 0.3s;">
+            <div class="glass p-8 rounded-3xl border border-white/5 hover:border-accent-purple transition-all fade-up flex flex-col h-full" style="animation-delay: 0.3s;">
                 <h4 class="text-xl font-bold mb-2">Full Day Outreach</h4>
                 <p class="text-slate-500 text-sm mb-6">Complete STEM immersion.</p>
                 <div class="flex items-baseline mb-8">
@@ -107,7 +113,9 @@
                     <li><i class="fas fa-check text-accent-purple mr-2"></i>Unlimited Attendance</li>
                     <li><i class="fas fa-check text-accent-purple mr-2"></i>Night Viewing Incl.</li>
                 </ul>
-                <button class="btn-premium btn-glass w-full py-4 text-lg">Select Plan</button>
+                <div class="mt-auto">
+                    <button class="btn-premium btn-glass w-full py-4 text-lg">Select Plan</button>
+                </div>
             </div>
         </div>
     </section>
@@ -119,39 +127,47 @@
                 <div class="fade-up">
                     <h2 class="text-4xl font-bold mb-6">Service <span class="text-accent-purple">Radius</span></h2>
                     <p class="text-slate-300 text-lg mb-8">We are based in Houston but travel across the state. Check our service distance cards below for travel fees.</p>
-                    <div class="space-y-4">
-                        <div class="btn-premium btn-glass">
+                    <div class="space-y-6">
+                        <div class="glass p-6 rounded-2xl flex justify-between items-center hover:border-accent-purple transition-all duration-300">
                             <div>
-                                <h5 class="font-bold">Zone 1 (0-30 miles)</h5>
-                                <p class="text-xs text-slate-500">Free Travel</p>
+                                <h5 class="text-xl font-bold">Zone 1 (0-30 miles)</h5>
+                                <p class="text-sm text-slate-400">Free Travel Inclusion</p>
                             </div>
-                            <i class="fas fa-truck-fast text-2xl text-accent-purple"></i>
+                            <div class="w-12 h-12 bg-accent-purple/10 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-truck-fast text-2xl text-accent-purple"></i>
+                            </div>
                         </div>
-                        <div class="btn-premium btn-glass">
+                        <div class="glass p-6 rounded-2xl flex justify-between items-center hover:border-accent-purple transition-all duration-300">
                             <div>
-                                <h5 class="font-bold">Zone 2 (31-60 miles)</h5>
-                                <p class="text-xs text-slate-500">$50 Travel Fee</p>
+                                <h5 class="text-xl font-bold">Zone 2 (31-60 miles)</h5>
+                                <p class="text-sm text-slate-400">$50 Standard Travel Fee</p>
                             </div>
-                            <i class="fas fa-truck text-2xl text-accent-purple"></i>
+                            <div class="w-12 h-12 bg-accent-purple/10 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-truck text-2xl text-accent-purple"></i>
+                            </div>
                         </div>
-                        <div class="btn-premium btn-glass">
+                        <div class="glass p-6 rounded-2xl flex justify-between items-center hover:border-accent-purple transition-all duration-300">
                             <div>
-                                <h5 class="font-bold">Zone 3 (60+ miles)</h5>
-                                <p class="text-xs text-slate-500">Custom Quote</p>
+                                <h5 class="text-xl font-bold">Zone 3 (60+ miles)</h5>
+                                <p class="text-sm text-slate-400">Custom Distance Quote</p>
                             </div>
-                            <i class="fas fa-map-location-dot text-2xl text-accent-purple"></i>
+                            <div class="w-12 h-12 bg-accent-purple/10 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-map-location-dot text-2xl text-accent-purple"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="fade-up">
-                    <div class="aspect-square glass rounded-[3rem] border border-white/10 flex items-center justify-center p-12 relative overflow-hidden">
-                         <div class="absolute inset-0 bg-accent-purple/5 animate-pulse"></div>
-                         <div class="relative text-center">
-                             <div class="btn-premium btn-primary">
-                                 <i class="fas fa-location-crosshairs text-5xl text-accent-purple"></i>
+                <div class="fade-up relative">
+                    <div class="aspect-square glass rounded-[3rem] border border-white/10 flex items-center justify-center p-4 relative overflow-hidden group">
+                         <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=1200" alt="Texas Map" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700">
+                         <div class="absolute inset-0 bg-gradient-to-t from-space-900 via-space-900/40 to-transparent"></div>
+                         <div class="relative text-center p-8">
+                             <div class="w-20 h-20 bg-accent-purple/20 rounded-full flex items-center justify-center mx-auto mb-6 glow-purple">
+                                 <i class="fas fa-location-dot text-4xl text-accent-purple"></i>
                              </div>
-                             <h4 class="text-2xl font-bold mb-2">Interactive Map</h4>
-                             <p class="text-slate-400">Coming soon: Instant distance calculator.</p>
+                             <h4 class="text-3xl font-bold mb-4">Interactive <span class="text-accent-purple">Map</span></h4>
+                             <p class="text-slate-300 max-w-sm mx-auto mb-8">Currently serving the greater Houston area and surrounding counties within a 150-mile radius.</p>
+                             <button class="btn-premium btn-primary rounded-full px-8 py-3">Calculate Distance</button>
                          </div>
                     </div>
                 </div>
@@ -165,7 +181,7 @@
             <h2 class="text-4xl font-bold mb-12 text-center fade-up">Common <span class="text-accent-purple">Questions</span></h2>
             <div class="space-y-4">
                 <!-- FAQ 1 -->
-                <details class="glass group rounded-2xl transition-all duration-300 fade-up" open>
+                <details class="glass group rounded-2xl transition-all duration-300 fade-up">
                     <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
                         <h5 class="font-bold text-lg">How much space is needed for the dome?</h5>
                         <i class="fas fa-chevron-down text-accent-purple transition-transform duration-300 group-open:rotate-180"></i>
@@ -201,7 +217,7 @@
     </section>
 
     <!-- Footer (Identical) -->
-    <footer class="footer-bg pt-24 pb-12 border-t border-white/10"><div class="max-w-7xl mx-auto px-4"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16"><div><div class="brand-container justify-center mb-6"><i class="fas fa-meteor brand-icon"></i><span class="brand-name">STELLAR</span></div><p class="text-slate-400 mb-6">Bringing the wonders of space to your doorstep. Immersive astronomy outreach for everyone.</p><div class="flex space-x-4"><a href="#" class="btn-premium btn-glass"><i class="fab fa-facebook-f"></i></a><a href="#" class="btn-premium btn-glass"><i class="fab fa-twitter"></i></a><a href="#" class="btn-premium btn-glass"><i class="fab fa-instagram"></i></a><a href="#" class="btn-premium btn-glass"><i class="fab fa-youtube"></i></a></div></div><div><h4 class="text-lg font-bold mb-6">Quick Links</h4><ul class="space-y-3 text-slate-400"><li><a href="about.html" class="hover:text-accent-purple">About Us</a></li><li><a href="dome-shows.html" class="hover:text-accent-purple">Dome Shows</a></li><li><a href="pricing.html" class="hover:text-accent-purple">Pricing</a></li><li><a href="blog.html" class="hover:text-accent-purple">Latest News</a></li><li><a href="contact.html" class="hover:text-accent-purple">Contact</a></li></ul></div><div><h4 class="text-lg font-bold mb-6">Programs</h4><ul class="space-y-3 text-slate-400"><li><a href="#" class="hover:text-accent-purple">School Assemblies</a></li><li><a href="#" class="hover:text-accent-purple">STEM Workshops</a></li><li><a href="#" class="hover:text-accent-purple">Birthday Packages</a></li><li><a href="#" class="hover:text-accent-purple">Community Events</a></li><li><a href="#" class="hover:text-accent-purple">Telescope Nights</a></li></ul></div><div><h4 class="text-lg font-bold mb-6">Newsletter</h4><p class="mb-4">Stay updated with celestial events and new shows.</p><form class="flex"><input type="email" placeholder="Email Address" class="flex-1 glass px-4 py-2 rounded-l-lg border-r-0 focus:outline-none focus:border-accent-purple"><button class="bg-accent-purple text-space-900 px-4 py-2 rounded-r-lg font-bold">Join</button></form></div></div><div class="pt-12 border-t border-white/10 text-center text-slate-500 text-sm"><p>&copy; 2024 Stellar Outreach. All rights reserved.</p></div></div></footer>
+    <footer class="footer-bg pt-24 pb-12 border-t border-white/10"><div class="max-w-7xl mx-auto px-4"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16"><div><div class="brand-container justify-center mb-6"><i class="fas fa-meteor brand-icon"></i><span class="brand-name">STELLAR</span></div><p class="text-slate-400 mb-6">Bringing the wonders of space to your doorstep. Immersive astronomy outreach for everyone.</p><div class="flex space-x-4"><a href="#" class="btn-premium btn-glass"><i class="fab fa-facebook-f"></i></a><a href="#" class="btn-premium btn-glass"><i class="fab fa-x-twitter"></i></a><a href="#" class="btn-premium btn-glass"><i class="fab fa-instagram"></i></a><a href="#" class="btn-premium btn-glass"><i class="fab fa-youtube"></i></a></div></div><div><h4 class="text-lg font-bold mb-6">Quick Links</h4><ul class="space-y-3 text-slate-400"><li><a href="about.html" class="hover:text-accent-purple">About Us</a></li><li><a href="dome-shows.html" class="hover:text-accent-purple">Dome Shows</a></li><li><a href="pricing.html" class="hover:text-accent-purple">Pricing</a></li><li><a href="blog.html" class="hover:text-accent-purple">Latest News</a></li><li><a href="contact.html" class="hover:text-accent-purple">Contact</a></li></ul></div><div><h4 class="text-lg font-bold mb-6">Programs</h4><ul class="space-y-3 text-slate-400"><li><a href="#" class="hover:text-accent-purple">School Assemblies</a></li><li><a href="#" class="hover:text-accent-purple">STEM Workshops</a></li><li><a href="#" class="hover:text-accent-purple">Birthday Packages</a></li><li><a href="#" class="hover:text-accent-purple">Community Events</a></li><li><a href="#" class="hover:text-accent-purple">Telescope Nights</a></li></ul></div><div><h4 class="text-lg font-bold mb-6">Newsletter</h4><p class="mb-4">Stay updated with celestial events and new shows.</p><form class="flex"><input type="email" placeholder="Email Address" class="flex-1 glass px-4 py-2 rounded-l-lg border-r-0 focus:outline-none focus:border-accent-purple"><button class="bg-accent-purple text-space-900 px-6 py-2 rounded-r-lg font-bold hover:bg-white hover:text-accent-purple transition-all duration-300">Join</button></form></div></div><div class="pt-12 border-t border-white/10 text-center text-slate-500 text-sm"><p>&copy; 2026 Stellar Outreach. All rights reserved.</p></div></div></footer>
 
     <!-- Back to Top -->
     <button id='back-to-top' class='fixed bottom-8 right-8 w-12 h-12 bg-accent-purple text-white rounded-full flex items-center justify-center shadow-2xl opacity-0 translate-y-10 transition-all duration-500 z-50 hover:scale-110 pointer-events-none'>

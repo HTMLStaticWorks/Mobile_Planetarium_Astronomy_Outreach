@@ -38,7 +38,7 @@
 </head>
 <body class="transition-colors duration-300">
     <!-- Navbar -->
-    <nav class="fixed top-0 w-full z-50 glass border-b border-white/10"><div class="max-w-7xl mx-auto px-4"><div class="flex items-center justify-between h-20"><div class="brand-container"><i class="fas fa-meteor brand-icon"></i><span class="brand-name">STELLAR</span></div><div class="hidden lg:flex items-center space-x-2"><a href="index.html" class="nav-link">Home1</a><a href="home2.html" class="nav-link">Home2</a><a href="about.html" class="nav-link">About</a><a href="programs.html" class="nav-link">Programs</a><a href="dome-shows.html" class="nav-link">Shows</a><a href="pricing.html" class="nav-link">Pricing</a><a href="blog.html" class="nav-link">Blog</a><a href="contact.html" class="nav-link">Contact</a></div><div class="hidden lg:flex items-center space-x-2"><button id="theme-toggle" class="p-2 hover:bg-white/10 rounded-full transition-colors"><i class="fas fa-sun text-accent-purple"></i></button><button id="rtl-toggle" class="p-2 hover:bg-white/10 rounded-full transition-colors text-sm font-bold">RTL</button><a href="login.html" class="btn-premium btn-primary rounded-full px-6 py-2">Login</a></div><div class="lg:hidden flex items-center gap-4"><button id="theme-toggle-mobile" class="p-2"><i class="fas fa-sun text-accent-purple"></i></button><button id="menu-btn" class="p-2 text-2xl"><i class="fas fa-bars"></i></button></div></div></div><div id="mobile-menu" class="hidden lg:hidden flex-col bg-space-900 border-t border-white/10 px-4 py-6 space-y-4"><a href="index.html" class="nav-link text-lg">Home1</a><a href="home2.html" class="nav-link text-lg">Home2</a><a href="about.html" class="nav-link text-lg">About</a><a href="programs.html" class="nav-link text-lg">Programs</a><a href="dome-shows.html" class="nav-link text-lg">Dome Shows</a><a href="pricing.html" class="nav-link text-lg">Pricing</a><a href="blog.html" class="nav-link text-lg">Blog</a><a href="contact.html" class="nav-link text-lg">Contact</a><div class="flex items-center gap-4 pt-4 border-t border-white/10"><a href="login.html" class="btn-premium btn-primary flex-1 text-center py-2">Login</a></div></div></nav>
+    <nav class="fixed top-0 w-full z-50 glass border-b border-white/10"><div class="max-w-7xl mx-auto px-4"><div class="flex items-center justify-between h-20"><a href="index.html" class="brand-container no-underline"><i class="fas fa-meteor brand-icon"></i><span class="brand-name">STELLAR</span></a><div class="hidden lg:flex items-center space-x-2"><a href="index.html" class="nav-link">Home1</a><a href="home2.html" class="nav-link">Home2</a><a href="about.html" class="nav-link">About</a><a href="programs.html" class="nav-link">Programs</a><a href="dome-shows.html" class="nav-link">Shows</a><a href="pricing.html" class="nav-link">Pricing</a><a href="blog.html" class="nav-link">Blog</a><a href="contact.html" class="nav-link">Contact</a></div><div class="hidden lg:flex items-center space-x-5"><button id="theme-toggle" class="p-2 hover:bg-white/10 rounded-full transition-colors"><i class="fas fa-sun text-accent-purple"></i></button><button id="rtl-toggle" class="p-2 hover:bg-white/10 rounded-full transition-colors text-sm font-bold">RTL</button><a href="login.html" class="btn-premium btn-primary rounded-full px-8 py-2">Login</a></div><div class="lg:hidden flex items-center gap-4"><button id="theme-toggle-mobile" class="p-2"><i class="fas fa-sun text-accent-purple"></i></button><button id="rtl-toggle-mobile" class="p-2 text-sm font-bold">RTL</button><button id="menu-btn" class="p-2 text-2xl"><i class="fas fa-bars"></i></button></div></div></div><div id="mobile-menu" class="hidden lg:hidden flex-col bg-space-900 border-t border-white/10 px-4 py-6 space-y-4"><a href="index.html" class="nav-link text-lg">Home1</a><a href="home2.html" class="nav-link text-lg">Home2</a><a href="about.html" class="nav-link text-lg">About</a><a href="programs.html" class="nav-link text-lg">Programs</a><a href="dome-shows.html" class="nav-link text-lg">Dome Shows</a><a href="pricing.html" class="nav-link text-lg">Pricing</a><a href="blog.html" class="nav-link text-lg">Blog</a><a href="contact.html" class="nav-link text-lg">Contact</a><div class="flex items-center gap-4 pt-4 border-t border-white/10"><a href="login.html" class="btn-premium btn-primary flex-1 text-center py-2">Login</a></div></div></nav>
 
     <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
@@ -53,7 +53,7 @@
             </div>
             <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight hero-title">
                 Explore the Wonders of the <br>
-                <span class="bg-gradient-to-r from-accent-purple  to-space-900 bg-clip-text text-transparent">Infinite Cosmos</span>
+                <span>Infinite Cosmos</span>
             </h1>
             <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto hero-text">
                 The most immersive mobile planetarium experience for schools, events, and stargazers. Educational outreach that inspires the next generation of explorers.
@@ -138,11 +138,11 @@
     <section class="py-24 section-bg relative">
         <div class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-16">
             <div class="lg:w-1/2 fade-up">
-                <div class="relative">
-                    <img src="assets/images/dome_interior.png" alt="Dome Interior" class="rounded-3xl shadow-2xl border border-white/10">
-                    <div class="btn-premium btn-glass">
-                        <p class="text-accent-purple font-bold text-3xl">360°</p>
-                        <p class="text-xs text-slate-300">Immersive Projection</p>
+                <div class="relative rounded-[2.5rem] overflow-hidden group">
+                    <img src="assets/images/dome_interior.png" alt="Dome Interior" class="w-full h-[400px] object-cover shadow-2xl border border-white/10 transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute bottom-6 left-6 btn-premium btn-glass flex items-center gap-3 backdrop-blur-xl border-white/20">
+                        <span class="text-accent-purple font-bold text-2xl">360°</span>
+                        <span class="text-xs text-slate-300 font-medium">Immersive Projection</span>
                     </div>
                 </div>
             </div>
@@ -165,7 +165,7 @@
                         <span>Professional Astronomer Narrators</span>
                     </li>
                 </ul>
-                <a href="dome-shows.html" class="inline-block px-8 py-4 bg-gradient-to-r from-accent-purple to-space-900 rounded-full font-bold shadow-lg shadow-purple-500/20">View Show Catalog</a>
+                <a href="dome-shows.html" class="btn-premium btn-primary px-10 py-4 rounded-full">View Show Catalog</a>
             </div>
         </div>
     </section>
@@ -198,26 +198,26 @@
     <section class="py-24 relative">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16 fade-up">
-                <h2 class="text-4xl font-bold mb-4">How It Works</h2>
+                <h2 class="text-4xl font-bold mb-12">How It Works</h2>
                 <p class="text-slate-400">Our seamless process for a stellar outreach event.</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Step 1 -->
                 <div class="glass p-10 rounded-[2.5rem] text-center fade-up group hover:border-accent-purple transition-all duration-300">
-                    <div class="btn-premium btn-primary">1</div>
+                    <div class="btn-premium btn-primary mb-6">1</div>
                     <h4 class="text-2xl font-bold mb-4">Booking</h4>
                     <p class="text-slate-400 leading-relaxed">Select your preferred date and outreach package through our simple online portal.</p>
                 </div>
                 <!-- Step 2 -->
                 <div class="glass p-10 rounded-[2.5rem] text-center fade-up group hover:border-accent-purple transition-all duration-300" style="animation-delay: 0.1s;">
-                    <div class="btn-premium btn-primary">2</div>
+                    <div class="btn-premium btn-primary mb-6">2</div>
                     <h4 class="text-2xl font-bold mb-4">Setup</h4>
                     <p class="text-slate-400 leading-relaxed">Our team arrives at your location and sets up the mobile planetarium dome in just 30 minutes.</p>
                 </div>
                 <!-- Step 3 -->
                 <div class="glass p-10 rounded-[2.5rem] text-center fade-up group hover:border-accent-purple transition-all duration-300" style="animation-delay: 0.2s;">
-                    <div class="btn-premium btn-primary">3</div>
+                    <div class="btn-premium btn-primary mb-6">3</div>
                     <h4 class="text-2xl font-bold mb-4">Presentation</h4>
                     <p class="text-slate-400 leading-relaxed">Sit back and enjoy an interactive, immersive journey through the stars and digital universe.</p>
                 </div>
@@ -236,32 +236,35 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="glass p-8 rounded-3xl fade-up">
-                    <p class="italic text-slate-300 mb-6">"The best school assembly we've had in years. The students were captivated by the galaxy visuals. A truly high-quality educational experience."</p>
-                    <div class="flex items-center gap-4">
-                        <img src="assets/images/sarah_jenkins.png" alt="Sarah Jenkins" class="w-12 h-12 rounded-full object-cover shadow-md">
+                <!-- Testimonial 1 -->
+                <div class="glass p-8 rounded-3xl fade-up flex flex-col h-full">
+                    <p class="italic text-slate-300 mb-6 flex-grow">"The best school assembly we've had in years. The students were captivated by the galaxy visuals. A truly high-quality educational experience."</p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <img src="assets/images/sarah_jenkins.png" alt="Sarah Jenkins" class="w-12 h-12 rounded-full object-cover shadow-md flex-shrink-0">
                         <div>
-                            <p class="font-bold">Sarah Jenkins</p>
+                            <p class="font-bold leading-tight">Sarah Jenkins</p>
                             <p class="text-xs text-slate-500">Principal, Northview Elementary</p>
                         </div>
                     </div>
                 </div>
-                <div class="glass p-8 rounded-3xl fade-up" style="animation-delay: 0.1s;">
-                    <p class="italic text-slate-300 mb-6">"My son's birthday party was out of this world! The telescope session after the dome show made every kid want to be an astronaut."</p>
-                    <div class="flex items-center gap-4">
-                        <img src="assets/images/mark_thompson.png" alt="Mark Thompson" class="w-12 h-12 rounded-full object-cover shadow-md">
+                <!-- Testimonial 2 -->
+                <div class="glass p-8 rounded-3xl fade-up flex flex-col h-full" style="animation-delay: 0.1s;">
+                    <p class="italic text-slate-300 mb-6 flex-grow">"My son's birthday party was out of this world! The telescope session after the dome show made every kid want to be an astronaut."</p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <img src="assets/images/mark_thompson.png" alt="Mark Thompson" class="w-12 h-12 rounded-full object-cover shadow-md flex-shrink-0">
                         <div>
-                            <p class="font-bold">Mark Thompson</p>
+                            <p class="font-bold leading-tight">Mark Thompson</p>
                             <p class="text-xs text-slate-500">Parent & Astronomy Enthusiast</p>
                         </div>
                     </div>
                 </div>
-                <div class="glass p-8 rounded-3xl fade-up" style="animation-delay: 0.2s;">
-                    <p class="italic text-slate-300 mb-6">"Professional, educational, and incredibly inspiring. Their passion for astronomy is contagious. Highly recommended for any science event."</p>
-                    <div class="flex items-center gap-4">
-                        <img src="assets/images/elena_rodriguez.png" alt="Dr. Elena Rodriguez" class="w-12 h-12 rounded-full object-cover shadow-md">
+                <!-- Testimonial 3 -->
+                <div class="glass p-8 rounded-3xl fade-up flex flex-col h-full" style="animation-delay: 0.2s;">
+                    <p class="italic text-slate-300 mb-6 flex-grow">"Professional, educational, and incredibly inspiring. Their passion for astronomy is contagious. Highly recommended for any science event."</p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <img src="assets/images/elena_rodriguez.png" alt="Dr. Elena Rodriguez" class="w-12 h-12 rounded-full object-cover shadow-md flex-shrink-0">
                         <div>
-                            <p class="font-bold">Dr. Elena Rodriguez</p>
+                            <p class="font-bold leading-tight">Dr. Elena Rodriguez</p>
                             <p class="text-xs text-slate-500">Science Museum Coordinator</p>
                         </div>
                     </div>
@@ -275,11 +278,11 @@
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 <div>
-                    <div class="brand-container justify-center mb-6"><i class="fas fa-meteor brand-icon"></i><span class="brand-name">STELLAR</span></div>
+                    <div class="brand-container mb-6"><i class="fas fa-meteor brand-icon"></i><span class="brand-name">STELLAR</span></div>
                     <p class="text-slate-400 mb-6">Bringing the wonders of space to your doorstep. Immersive astronomy outreach for everyone.</p>
                     <div class="flex space-x-4">
                         <a href="#" class="btn-premium btn-glass"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="btn-premium btn-glass"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn-premium btn-glass"><i class="fab fa-x-twitter"></i></a>
                         <a href="#" class="btn-premium btn-glass"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="btn-premium btn-glass"><i class="fab fa-youtube"></i></a>
                     </div>
@@ -312,13 +315,13 @@
                     <p class="mb-4">Stay updated with celestial events and new shows.</p>
                     <form class="flex">
                         <input type="email" placeholder="Email Address" class="flex-1 glass px-4 py-2 rounded-l-lg border-r-0 focus:outline-none focus:border-accent-purple">
-                        <button class="bg-accent-purple text-space-900 px-4 py-2 rounded-r-lg font-bold">Join</button>
+                        <button class="bg-accent-purple text-space-900 px-6 py-2 rounded-r-lg font-bold hover:bg-white hover:text-accent-purple transition-all duration-300">Join</button>
                     </form>
                 </div>
             </div>
             
             <div class="pt-12 border-t border-white/10 text-center text-slate-500 text-sm">
-                <p>&copy; 2024 Stellar Outreach. All rights reserved.</p>
+                <p>&copy; 2026 Stellar Outreach. All rights reserved.</p>
             </div>
         </div>
     </footer>

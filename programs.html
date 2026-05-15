@@ -31,7 +31,7 @@
 </head>
 <body class="transition-colors duration-300">
     <!-- Navbar (Identical) -->
-    <nav class="fixed top-0 w-full z-50 glass border-b border-white/10"><div class="max-w-7xl mx-auto px-4"><div class="flex items-center justify-between h-20"><div class="brand-container"><i class="fas fa-meteor brand-icon"></i><span class="brand-name">STELLAR</span></div><div class="hidden lg:flex items-center space-x-2"><a href="index.html" class="nav-link">Home1</a><a href="home2.html" class="nav-link">Home2</a><a href="about.html" class="nav-link">About</a><a href="programs.html" class="nav-link">Programs</a><a href="dome-shows.html" class="nav-link">Shows</a><a href="pricing.html" class="nav-link">Pricing</a><a href="blog.html" class="nav-link">Blog</a><a href="contact.html" class="nav-link">Contact</a></div><div class="hidden lg:flex items-center space-x-2"><button id="theme-toggle" class="p-2 hover:bg-white/10 rounded-full transition-colors"><i class="fas fa-sun text-accent-purple"></i></button><button id="rtl-toggle" class="p-2 hover:bg-white/10 rounded-full transition-colors text-sm font-bold">RTL</button><a href="login.html" class="btn-premium btn-primary rounded-full px-6 py-2">Login</a></div><div class="lg:hidden flex items-center gap-4"><button id="theme-toggle-mobile" class="p-2"><i class="fas fa-sun text-accent-purple"></i></button><button id="menu-btn" class="p-2 text-2xl"><i class="fas fa-bars"></i></button></div></div></div><div id="mobile-menu" class="hidden lg:hidden flex-col bg-space-900 border-t border-white/10 px-4 py-6 space-y-4"><a href="index.html" class="nav-link text-lg">Home1</a><a href="home2.html" class="nav-link text-lg">Home2</a><a href="about.html" class="nav-link text-lg">About</a><a href="programs.html" class="nav-link text-lg">Programs</a><a href="dome-shows.html" class="nav-link text-lg">Dome Shows</a><a href="pricing.html" class="nav-link text-lg">Pricing</a><a href="blog.html" class="nav-link text-lg">Blog</a><a href="contact.html" class="nav-link text-lg">Contact</a><div class="flex items-center gap-4 pt-4 border-t border-white/10"><a href="login.html" class="btn-premium btn-primary flex-1 text-center py-2">Login</a></div></div></nav>
+    <nav class="fixed top-0 w-full z-50 glass border-b border-white/10"><div class="max-w-7xl mx-auto px-4"><div class="flex items-center justify-between h-20"><a href="index.html" class="brand-container no-underline"><i class="fas fa-meteor brand-icon"></i><span class="brand-name">STELLAR</span></a><div class="hidden lg:flex items-center space-x-2"><a href="index.html" class="nav-link">Home1</a><a href="home2.html" class="nav-link">Home2</a><a href="about.html" class="nav-link">About</a><a href="programs.html" class="nav-link">Programs</a><a href="dome-shows.html" class="nav-link">Shows</a><a href="pricing.html" class="nav-link">Pricing</a><a href="blog.html" class="nav-link">Blog</a><a href="contact.html" class="nav-link">Contact</a></div><div class="hidden lg:flex items-center space-x-5"><button id="theme-toggle" class="p-2 hover:bg-white/10 rounded-full transition-colors"><i class="fas fa-sun text-accent-purple"></i></button><button id="rtl-toggle" class="p-2 hover:bg-white/10 rounded-full transition-colors text-sm font-bold">RTL</button><a href="login.html" class="btn-premium btn-primary rounded-full px-8 py-2">Login</a></div><div class="lg:hidden flex items-center gap-4"><button id="theme-toggle-mobile" class="p-2"><i class="fas fa-sun text-accent-purple"></i></button><button id="rtl-toggle-mobile" class="p-2 text-sm font-bold">RTL</button><button id="menu-btn" class="p-2 text-2xl"><i class="fas fa-bars"></i></button></div></div></div><div id="mobile-menu" class="hidden lg:hidden flex-col bg-space-900 border-t border-white/10 px-4 py-6 space-y-4"><a href="index.html" class="nav-link text-lg">Home1</a><a href="home2.html" class="nav-link text-lg">Home2</a><a href="about.html" class="nav-link text-lg">About</a><a href="programs.html" class="nav-link text-lg">Programs</a><a href="dome-shows.html" class="nav-link text-lg">Dome Shows</a><a href="pricing.html" class="nav-link text-lg">Pricing</a><a href="blog.html" class="nav-link text-lg">Blog</a><a href="contact.html" class="nav-link text-lg">Contact</a><div class="flex items-center gap-4 pt-4 border-t border-white/10"><a href="login.html" class="btn-premium btn-primary flex-1 text-center py-2">Login</a></div></div></nav>
 
     <!-- Hero Section -->
     <section class="relative h-[60vh] flex items-center justify-center pt-20 overflow-hidden">
@@ -40,7 +40,7 @@
             <div class="absolute inset-0 hero-overlay"></div>
         </div>
         <div class="relative z-10 text-center fade-up">
-            <h1 class="text-5xl font-extrabold mb-4 hero-title">Astronomy <span class="text-accent-purple">Outreach</span></h1>
+            <h1 class="text-5xl font-extrabold mb-4 hero-title">Astronomy <span>Outreach</span></h1>
             <p class="text-lg max-w-xl mx-auto hero-text">From classrooms to community centers, we bring the universe to life.</p>
         </div>
     </section>
@@ -50,11 +50,11 @@
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Program 1 -->
-                <div class="glass overflow-hidden rounded-3xl group fade-up">
+                <div class="glass overflow-hidden rounded-3xl group fade-up flex flex-col h-full">
                     <div class="h-48 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=800" alt="School" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
-                    <div class="p-8">
+                    <div class="p-8 flex flex-col flex-grow">
                         <h3 class="text-2xl font-bold mb-4">School Programs</h3>
                         <p class="text-slate-400 mb-6">Interactive dome shows and workshops designed to meet national science curriculum standards.</p>
                         <ul class="space-y-2 mb-8 text-sm text-slate-300">
@@ -62,15 +62,17 @@
                             <li><i class="fas fa-check text-accent-purple mr-2"></i>K-12 Appropriate</li>
                             <li><i class="fas fa-check text-accent-purple mr-2"></i>Q&A Sessions</li>
                         </ul>
-                        <a href="contact.html" class="block text-center py-3 border border-accent-purple rounded-xl text-accent-purple font-bold hover:bg-accent-purple hover:text-space-900 transition-all">Book for School</a>
+                        <div class="mt-auto">
+                            <a href="contact.html" class="btn-premium btn-glass w-full text-center py-3 block">Book for School</a>
+                        </div>
                     </div>
                 </div>
                 <!-- Program 2 -->
-                <div class="glass overflow-hidden rounded-3xl group fade-up" style="animation-delay: 0.1s;">
+                <div class="glass overflow-hidden rounded-3xl group fade-up flex flex-col h-full" style="animation-delay: 0.1s;">
                     <div class="h-48 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1530103043960-ef38714abb15?auto=format&fit=crop&q=80&w=800" alt="Birthday" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
-                    <div class="p-8">
+                    <div class="p-8 flex flex-col flex-grow">
                         <h3 class="text-2xl font-bold mb-4">Birthday Packages</h3>
                         <p class="text-slate-400 mb-6">The ultimate space-themed birthday experience right in your driveway or backyard.</p>
                         <ul class="space-y-2 mb-8 text-sm text-slate-300">
@@ -78,15 +80,17 @@
                             <li><i class="fas fa-check text-accent-purple mr-2"></i>Space VR Experience</li>
                             <li><i class="fas fa-check text-accent-purple mr-2"></i>Custom Certificates</li>
                         </ul>
-                        <a href="contact.html" class="block text-center py-3 border border-accent-purple rounded-xl text-accent-purple font-bold hover:bg-accent-purple hover:text-white transition-all">Book Birthday</a>
+                        <div class="mt-auto">
+                            <a href="contact.html" class="btn-premium btn-glass w-full text-center py-3 block">Book Birthday</a>
+                        </div>
                     </div>
                 </div>
                 <!-- Program 3 -->
-                <div class="glass overflow-hidden rounded-3xl group fade-up" style="animation-delay: 0.2s;">
+                <div class="glass overflow-hidden rounded-3xl group fade-up flex flex-col h-full" style="animation-delay: 0.2s;">
                     <div class="h-48 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45?auto=format&fit=crop&q=80&w=800" alt="Workshop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
-                    <div class="p-8">
+                    <div class="p-8 flex flex-col flex-grow">
                         <h3 class="text-2xl font-bold mb-4">STEM Workshops</h3>
                         <p class="text-slate-400 mb-6">Practical science skills including telescope handling and astrophotography basics.</p>
                         <ul class="space-y-2 mb-8 text-sm text-slate-300">
@@ -94,7 +98,9 @@
                             <li><i class="fas fa-check text-accent-purple mr-2"></i>Equipment Provided</li>
                             <li><i class="fas fa-check text-accent-purple mr-2"></i>Take-home Projects</li>
                         </ul>
-                        <a href="contact.html" class="block text-center py-3 border border-accent-purple rounded-xl text-accent-purple font-bold hover:bg-accent-purple hover:text-white transition-all">Join Workshop</a>
+                        <div class="mt-auto">
+                            <a href="contact.html" class="btn-premium btn-glass w-full text-center py-3 block">Join Workshop</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -144,7 +150,7 @@
             <h2 class="text-4xl font-bold mb-16 text-center fade-up">Program <span class="text-accent-purple">Packages</span></h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Package 1 -->
-                <div class="glass p-8 rounded-[2rem] border border-white/5 hover:border-accent-purple transition-all fade-up">
+                <div class="glass p-8 rounded-[2rem] border border-white/5 hover:border-accent-purple transition-all fade-up flex flex-col h-full">
                     <h4 class="text-xl font-bold mb-4">Discovery Session</h4>
                     <p class="text-4xl font-extrabold mb-6">$299<span class="text-sm font-normal text-slate-500 ml-2">/ event</span></p>
                     <ul class="space-y-4 mb-10 text-slate-400">
@@ -153,11 +159,13 @@
                         <li><i class="fas fa-check text-accent-purple mr-2"></i>Interactive Q&A</li>
                         <li class="opacity-30"><i class="fas fa-times mr-2"></i>Telescope Add-on</li>
                     </ul>
-                    <a href="contact.html" class="block text-center py-4 bg-white/5 rounded-xl font-bold hover:bg-accent-purple hover:text-space-900 transition-all">Get Started</a>
+                    <div class="mt-auto">
+                        <a href="contact.html" class="btn-premium btn-glass w-full text-center py-4 block">Get Started</a>
+                    </div>
                 </div>
                 <!-- Package 2 -->
-                <div class="glass p-8 rounded-[2rem] border-2 border-accent-purple relative transform scale-105 z-10 fade-up" style="animation-delay: 0.1s;">
-                    <div class="btn-premium btn-primary">Most Popular</div>
+                <div class="glass p-8 rounded-[2rem] border-4 border-accent-purple relative fade-up flex flex-col h-full" style="animation-delay: 0.1s;">
+                    <div class="btn-premium btn-primary mb-6">Most Popular</div>
                     <h4 class="text-xl font-bold mb-4">Cosmic Day Out</h4>
                     <p class="text-4xl font-extrabold mb-6">$549<span class="text-sm font-normal text-slate-500 ml-2">/ day</span></p>
                     <ul class="space-y-4 mb-10 text-slate-400">
@@ -166,10 +174,12 @@
                         <li><i class="fas fa-check text-accent-purple mr-2"></i>Resource Packs</li>
                         <li><i class="fas fa-check text-accent-purple mr-2"></i>Telescope Demo</li>
                     </ul>
-                    <a href="contact.html" class="btn-premium btn-primary">Book Now</a>
+                    <div class="mt-auto">
+                        <a href="contact.html" class="btn-premium btn-primary w-full text-center block">Book Now</a>
+                    </div>
                 </div>
                 <!-- Package 3 -->
-                <div class="glass p-8 rounded-[2rem] border border-white/5 hover:border-accent-purple transition-all fade-up" style="animation-delay: 0.2s;">
+                <div class="glass p-8 rounded-[2rem] border border-white/5 hover:border-accent-purple transition-all fade-up flex flex-col h-full" style="animation-delay: 0.2s;">
                     <h4 class="text-xl font-bold mb-4">Ultimate Outreach</h4>
                     <p class="text-4xl font-extrabold mb-6">$899<span class="text-sm font-normal text-slate-500 ml-2">/ day</span></p>
                     <ul class="space-y-4 mb-10 text-slate-400">
@@ -178,14 +188,16 @@
                         <li><i class="fas fa-check text-accent-purple mr-2"></i>STEM Workshop Kit</li>
                         <li><i class="fas fa-check text-accent-purple mr-2"></i>Unlimited Students</li>
                     </ul>
-                    <a href="contact.html" class="block text-center py-4 bg-white/5 rounded-xl font-bold hover:bg-accent-purple transition-all">Contact Sales</a>
+                    <div class="mt-auto">
+                        <a href="contact.html" class="btn-premium btn-glass w-full text-center py-4 block">Contact Sales</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer (Identical) -->
-    <footer class="footer-bg pt-24 pb-12 border-t border-white/10"><div class="max-w-7xl mx-auto px-4"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16"><div><div class="brand-container justify-center mb-6"><i class="fas fa-meteor brand-icon"></i><span class="brand-name">STELLAR</span></div><p class="text-slate-400 mb-6">Bringing the wonders of space to your doorstep. Immersive astronomy outreach for everyone.</p><div class="flex space-x-4"><a href="#" class="btn-premium btn-glass"><i class="fab fa-facebook-f"></i></a><a href="#" class="btn-premium btn-glass"><i class="fab fa-twitter"></i></a><a href="#" class="btn-premium btn-glass"><i class="fab fa-instagram"></i></a><a href="#" class="btn-premium btn-glass"><i class="fab fa-youtube"></i></a></div></div><div><h4 class="text-lg font-bold mb-6">Quick Links</h4><ul class="space-y-3 text-slate-400"><li><a href="about.html" class="hover:text-accent-purple">About Us</a></li><li><a href="dome-shows.html" class="hover:text-accent-purple">Dome Shows</a></li><li><a href="pricing.html" class="hover:text-accent-purple">Pricing</a></li><li><a href="blog.html" class="hover:text-accent-purple">Latest News</a></li><li><a href="contact.html" class="hover:text-accent-purple">Contact</a></li></ul></div><div><h4 class="text-lg font-bold mb-6">Programs</h4><ul class="space-y-3 text-slate-400"><li><a href="#" class="hover:text-accent-purple">School Assemblies</a></li><li><a href="#" class="hover:text-accent-purple">STEM Workshops</a></li><li><a href="#" class="hover:text-accent-purple">Birthday Packages</a></li><li><a href="#" class="hover:text-accent-purple">Community Events</a></li><li><a href="#" class="hover:text-accent-purple">Telescope Nights</a></li></ul></div><div><h4 class="text-lg font-bold mb-6">Newsletter</h4><p class="mb-4">Stay updated with celestial events and new shows.</p><form class="flex"><input type="email" placeholder="Email Address" class="flex-1 glass px-4 py-2 rounded-l-lg border-r-0 focus:outline-none focus:border-accent-purple"><button class="bg-accent-purple text-space-900 px-4 py-2 rounded-r-lg font-bold">Join</button></form></div></div><div class="pt-12 border-t border-white/10 text-center text-slate-500 text-sm"><p>&copy; 2024 Stellar Outreach. All rights reserved.</p></div></div></footer>
+    <footer class="footer-bg pt-24 pb-12 border-t border-white/10"><div class="max-w-7xl mx-auto px-4"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16"><div><div class="brand-container justify-center mb-6"><i class="fas fa-meteor brand-icon"></i><span class="brand-name">STELLAR</span></div><p class="text-slate-400 mb-6">Bringing the wonders of space to your doorstep. Immersive astronomy outreach for everyone.</p><div class="flex space-x-4"><a href="#" class="btn-premium btn-glass"><i class="fab fa-facebook-f"></i></a><a href="#" class="btn-premium btn-glass"><i class="fab fa-x-twitter"></i></a><a href="#" class="btn-premium btn-glass"><i class="fab fa-instagram"></i></a><a href="#" class="btn-premium btn-glass"><i class="fab fa-youtube"></i></a></div></div><div><h4 class="text-lg font-bold mb-6">Quick Links</h4><ul class="space-y-3 text-slate-400"><li><a href="about.html" class="hover:text-accent-purple">About Us</a></li><li><a href="dome-shows.html" class="hover:text-accent-purple">Dome Shows</a></li><li><a href="pricing.html" class="hover:text-accent-purple">Pricing</a></li><li><a href="blog.html" class="hover:text-accent-purple">Latest News</a></li><li><a href="contact.html" class="hover:text-accent-purple">Contact</a></li></ul></div><div><h4 class="text-lg font-bold mb-6">Programs</h4><ul class="space-y-3 text-slate-400"><li><a href="#" class="hover:text-accent-purple">School Assemblies</a></li><li><a href="#" class="hover:text-accent-purple">STEM Workshops</a></li><li><a href="#" class="hover:text-accent-purple">Birthday Packages</a></li><li><a href="#" class="hover:text-accent-purple">Community Events</a></li><li><a href="#" class="hover:text-accent-purple">Telescope Nights</a></li></ul></div><div><h4 class="text-lg font-bold mb-6">Newsletter</h4><p class="mb-4">Stay updated with celestial events and new shows.</p><form class="flex"><input type="email" placeholder="Email Address" class="flex-1 glass px-4 py-2 rounded-l-lg border-r-0 focus:outline-none focus:border-accent-purple"><button class="bg-accent-purple text-space-900 px-6 py-2 rounded-r-lg font-bold hover:bg-white hover:text-accent-purple transition-all duration-300">Join</button></form></div></div><div class="pt-12 border-t border-white/10 text-center text-slate-500 text-sm"><p>&copy; 2026 Stellar Outreach. All rights reserved.</p></div></div></footer>
 
     <!-- Back to Top -->
     <button id='back-to-top' class='fixed bottom-8 right-8 w-12 h-12 bg-accent-purple text-white rounded-full flex items-center justify-center shadow-2xl opacity-0 translate-y-10 transition-all duration-500 z-50 hover:scale-110 pointer-events-none'>
