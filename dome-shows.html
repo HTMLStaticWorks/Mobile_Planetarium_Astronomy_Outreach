@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dome Shows | Stellar Astronomy Outreach</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        space: { 900: '#0F172A', 800: '#1e293b' },
+                        purple: { 500: '#6D5EF3' }, accent: { purple: '#6D5EF3' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="transition-colors duration-300">
+    <!-- Navbar (Identical) -->
+    <nav class="fixed top-0 w-full z-50 glass border-b border-white/10"><div class="max-w-7xl mx-auto px-4"><div class="flex items-center justify-between h-20"><div class="brand-container"><i class="fas fa-meteor brand-icon"></i><span class="brand-name">STELLAR</span></div><div class="hidden lg:flex items-center space-x-2"><a href="index.html" class="nav-link">Home1</a><a href="home2.html" class="nav-link">Home2</a><a href="about.html" class="nav-link">About</a><a href="programs.html" class="nav-link">Programs</a><a href="dome-shows.html" class="nav-link">Shows</a><a href="pricing.html" class="nav-link">Pricing</a><a href="blog.html" class="nav-link">Blog</a><a href="contact.html" class="nav-link">Contact</a></div><div class="hidden lg:flex items-center space-x-2"><button id="theme-toggle" class="p-2 hover:bg-white/10 rounded-full transition-colors"><i class="fas fa-sun text-accent-purple"></i></button><button id="rtl-toggle" class="p-2 hover:bg-white/10 rounded-full transition-colors text-sm font-bold">RTL</button><a href="login.html" class="btn-premium btn-primary rounded-full px-6 py-2">Login</a></div><div class="lg:hidden flex items-center gap-4"><button id="theme-toggle-mobile" class="p-2"><i class="fas fa-sun text-accent-purple"></i></button><button id="menu-btn" class="p-2 text-2xl"><i class="fas fa-bars"></i></button></div></div></div><div id="mobile-menu" class="hidden lg:hidden flex-col bg-space-900 border-t border-white/10 px-4 py-6 space-y-4"><a href="index.html" class="nav-link text-lg">Home1</a><a href="home2.html" class="nav-link text-lg">Home2</a><a href="about.html" class="nav-link text-lg">About</a><a href="programs.html" class="nav-link text-lg">Programs</a><a href="dome-shows.html" class="nav-link text-lg">Dome Shows</a><a href="pricing.html" class="nav-link text-lg">Pricing</a><a href="blog.html" class="nav-link text-lg">Blog</a><a href="contact.html" class="nav-link text-lg">Contact</a><div class="flex items-center gap-4 pt-4 border-t border-white/10"><a href="login.html" class="btn-premium btn-primary flex-1 text-center py-2">Login</a></div></div></nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] flex items-center justify-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&q=80&w=2000" alt="Space" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        <div class="relative z-10 text-center fade-up">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 hero-title">Dome <span class="text-accent-purple">Shows</span></h1>
+            <p class="text-xl max-w-2xl mx-auto hero-text">Immersive 360-degree experiences that transport you to the farthest reaches of the cosmos.</p>
+        </div>
+    </section>
+
+    <!-- Shows Gallery Section -->
+    <section class="py-24">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Show 1 -->
+                <div class="glass overflow-hidden rounded-[2.5rem] group fade-up">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1464802686167-b939a6910659?auto=format&fit=crop&q=80&w=800" alt="Galaxy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold">Galaxy Explorer</h3>
+                            <span class="text-xs font-bold text-accent-purple border border-accent-purple px-2 py-1 rounded">45 MIN</span>
+                        </div>
+                        <p class="text-slate-400 mb-6">Fly through distant nebulae and discover the secrets of the Milky Way and beyond.</p>
+                        <div class="flex items-center gap-4 text-sm text-slate-500 mb-8">
+                            <span><i class="fas fa-child mr-1"></i> Ages 6+</span>
+                            <span><i class="fas fa-star text-accent-purple mr-1"></i> 4.9/5</span>
+                        </div>
+                        <button class="w-full py-4 bg-white/5 rounded-2xl font-bold hover:bg-accent-purple hover:text-space-900 transition-all btn-premium">Watch Preview</button>
+                    </div>
+                </div>
+                <!-- Show 2 -->
+                <div class="glass overflow-hidden rounded-[2.5rem] group fade-up" style="animation-delay: 0.1s;">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&q=80&w=800" alt="Mars" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold">Mars Mission</h3>
+                            <span class="text-xs font-bold text-accent-purple border border-accent-purple px-2 py-1 rounded">40 MIN</span>
+                        </div>
+                        <p class="text-slate-400 mb-6">A detailed look at the red planet and the future of human colonization.</p>
+                        <div class="flex items-center gap-4 text-sm text-slate-500 mb-8">
+                            <span><i class="fas fa-child mr-1"></i> Ages 8+</span>
+                            <span><i class="fas fa-star text-accent-purple mr-1"></i> 4.8/5</span>
+                        </div>
+                        <button class="w-full py-4 bg-white/5 rounded-2xl font-bold hover:bg-accent-purple hover:text-space-900 transition-all btn-premium">Watch Preview</button>
+                    </div>
+                </div>
+                <!-- Show 3 -->
+                <div class="glass overflow-hidden rounded-[2.5rem] group fade-up" style="animation-delay: 0.2s;">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&q=80&w=800" alt="Black Hole" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold">Black Holes</h3>
+                            <span class="text-xs font-bold text-accent-purple border border-accent-purple px-2 py-1 rounded">50 MIN</span>
+                        </div>
+                        <p class="text-slate-400 mb-6">Explore the physics of gravity and the mysteries of event horizons.</p>
+                        <div class="flex items-center gap-4 text-sm text-slate-500 mb-8">
+                            <span><i class="fas fa-child mr-1"></i> Ages 12+</span>
+                            <span><i class="fas fa-star text-accent-purple mr-1"></i> 5.0/5</span>
+                        </div>
+                        <button class="w-full py-4 bg-white/5 rounded-2xl font-bold hover:bg-accent-purple hover:text-space-900 transition-all btn-premium">Watch Preview</button>
+                    </div>
+                </div>
+                <!-- Show 4 -->
+                <div class="glass overflow-hidden rounded-[2.5rem] group fade-up">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?auto=format&fit=crop&q=80&w=800" alt="Solar System" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold">Deep Universe</h3>
+                            <span class="text-xs font-bold text-accent-purple border border-accent-purple px-2 py-1 rounded">35 MIN</span>
+                        </div>
+                        <p class="text-slate-400 mb-6">A visual poem about the origins of the cosmos from the Big Bang to today.</p>
+                        <div class="flex items-center gap-4 text-sm text-slate-500 mb-8">
+                            <span><i class="fas fa-child mr-1"></i> All Ages</span>
+                            <span><i class="fas fa-star text-accent-purple mr-1"></i> 4.7/5</span>
+                        </div>
+                        <button class="w-full py-4 bg-white/5 rounded-2xl font-bold hover:bg-accent-purple hover:text-space-900 transition-all btn-premium">Watch Preview</button>
+                    </div>
+                </div>
+                <!-- Show 5 -->
+                <div class="glass overflow-hidden rounded-[2.5rem] group fade-up" style="animation-delay: 0.1s;">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1543722530-d2c3201371e7?auto=format&fit=crop&q=80&w=800" alt="Stellar Birth" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold">Stellar Birth</h3>
+                            <span class="text-xs font-bold text-accent-purple border border-accent-purple px-2 py-1 rounded">40 MIN</span>
+                        </div>
+                        <p class="text-slate-400 mb-6">Witness the dramatic formation of stars from massive clouds of cosmic gas and dust.</p>
+                        <div class="flex items-center gap-4 text-sm text-slate-500 mb-8">
+                            <span><i class="fas fa-child mr-1"></i> Ages 8+</span>
+                            <span><i class="fas fa-star text-accent-purple mr-1"></i> 4.6/5</span>
+                        </div>
+                        <button class="w-full py-4 bg-white/5 rounded-2xl font-bold hover:bg-accent-purple hover:text-space-900 transition-all btn-premium">Watch Preview</button>
+                    </div>
+                </div>
+                <!-- Show 6 -->
+                <div class="glass overflow-hidden rounded-[2.5rem] group fade-up" style="animation-delay: 0.2s;">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&q=80&w=800" alt="Voyager" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold">Voyager Legacy</h3>
+                            <span class="text-xs font-bold text-accent-purple border border-accent-purple px-2 py-1 rounded">55 MIN</span>
+                        </div>
+                        <p class="text-slate-400 mb-6">Follow the journey of the twin Voyager probes as they explore the outer reaches of our system.</p>
+                        <div class="flex items-center gap-4 text-sm text-slate-500 mb-8">
+                            <span><i class="fas fa-child mr-1"></i> All Ages</span>
+                            <span><i class="fas fa-star text-accent-purple mr-1"></i> 4.9/5</span>
+                        </div>
+                        <button class="w-full py-4 bg-white/5 rounded-2xl font-bold hover:bg-accent-purple hover:text-space-900 transition-all btn-premium">Watch Preview</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Engagement Section -->
+    <section class="py-24 section-bg">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-12 text-center fade-up">Show <span class="text-accent-purple">Engagement</span></h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="glass p-8 rounded-3xl fade-up">
+                    <h4 class="text-xl font-bold mb-8">Audience Popularity</h4>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between text-sm mb-2"><span>Galaxy Explorer</span><span>95%</span></div>
+                            <div class="h-2 bg-white/10 rounded-full overflow-hidden"><div class="h-full bg-accent-purple w-[95%]"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-2"><span>Mars Mission</span><span>82%</span></div>
+                            <div class="h-2 bg-white/10 rounded-full overflow-hidden"><div class="h-full bg-accent-purple w-[82%]"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-2"><span>Black Holes</span><span>78%</span></div>
+                            <div class="h-2 bg-white/10 rounded-full overflow-hidden"><div class="h-full bg-accent-purple w-[78%]"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass p-8 rounded-3xl flex items-center justify-center fade-up" style="animation-delay: 0.1s;">
+                    <div class="text-center">
+                        <div class="relative inline-block mb-6">
+                            <svg class="w-48 h-48">
+                                <circle class="text-white/10" stroke-width="12" stroke="currentColor" fill="transparent" r="80" cx="96" cy="96" />
+                                <circle class="text-accent-purple" stroke-width="12" stroke-dasharray="502.6" stroke-dashoffset="100.5" stroke-linecap="round" stroke="currentColor" fill="transparent" r="80" cx="96" cy="96" />
+                            </svg>
+                            <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                <span class="text-4xl font-bold">8.5k</span>
+                                <span class="text-xs text-slate-500 uppercase">Avg Views/Mo</span>
+                            </div>
+                        </div>
+                        <p class="text-slate-400">Join thousands of viewers exploring the cosmos every month.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-bg pt-24 pb-12 border-t border-white/10"><div class="max-w-7xl mx-auto px-4"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16"><div><div class="brand-container justify-center mb-6"><i class="fas fa-meteor brand-icon"></i><span class="brand-name">STELLAR</span></div><p class="text-slate-400 mb-6">Bringing the wonders of space to your doorstep. Immersive astronomy outreach for everyone.</p><div class="flex space-x-4"><a href="#" class="btn-premium btn-glass"><i class="fab fa-facebook-f"></i></a><a href="#" class="btn-premium btn-glass"><i class="fab fa-twitter"></i></a><a href="#" class="btn-premium btn-glass"><i class="fab fa-instagram"></i></a><a href="#" class="btn-premium btn-glass"><i class="fab fa-youtube"></i></a></div></div><div><h4 class="text-lg font-bold mb-6">Quick Links</h4><ul class="space-y-3 text-slate-400"><li><a href="about.html" class="hover:text-accent-purple">About Us</a></li><li><a href="dome-shows.html" class="hover:text-accent-purple">Dome Shows</a></li><li><a href="pricing.html" class="hover:text-accent-purple">Pricing</a></li><li><a href="blog.html" class="hover:text-accent-purple">Latest News</a></li><li><a href="contact.html" class="hover:text-accent-purple">Contact</a></li></ul></div><div><h4 class="text-lg font-bold mb-6">Programs</h4><ul class="space-y-3 text-slate-400"><li><a href="#" class="hover:text-accent-purple">School Assemblies</a></li><li><a href="#" class="hover:text-accent-purple">STEM Workshops</a></li><li><a href="#" class="hover:text-accent-purple">Birthday Packages</a></li><li><a href="#" class="hover:text-accent-purple">Community Events</a></li><li><a href="#" class="hover:text-accent-purple">Telescope Nights</a></li></ul></div><div><h4 class="text-lg font-bold mb-6">Newsletter</h4><p class="mb-4">Stay updated with celestial events and new shows.</p><form class="flex"><input type="email" placeholder="Email Address" class="flex-1 glass px-4 py-2 rounded-l-lg border-r-0 focus:outline-none focus:border-accent-purple"><button class="bg-accent-purple text-space-900 px-4 py-2 rounded-r-lg font-bold">Join</button></form></div></div><div class="pt-12 border-t border-white/10 text-center text-slate-500 text-sm"><p>&copy; 2024 Stellar Outreach. All rights reserved.</p></div></div></footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-accent-purple text-white rounded-full flex items-center justify-center shadow-2xl opacity-0 translate-y-10 transition-all duration-500 z-50 hover:scale-110 pointer-events-none">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

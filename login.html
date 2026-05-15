@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Stellar Outreach</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        space: {
+                            900: '#0F172A',
+                            800: '#1e293b',
+                            700: '#334155',
+                        },
+                        accent: {
+                            purple: '#6D5EF3',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .auth-bg {
+            background-color: #0F172A;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(109, 94, 243, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(109, 94, 243, 0.15) 0px, transparent 50%);
+        }
+        [data-theme="light"] .auth-bg {
+            background-color: #f8fafc;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(109, 94, 243, 0.05) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(109, 94, 243, 0.05) 0px, transparent 50%);
+        }
+    </style>
+</head>
+<body class="transition-colors duration-300 min-h-screen auth-bg flex flex-col">
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 p-6 md:p-10">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <!-- Logo + Brand removed from here -->
+            <div></div>
+
+            <!-- Top Right: Toggles -->
+            <div class="flex items-center space-x-4">
+                <button id="theme-toggle" class="w-10 h-10 flex items-center justify-center rounded-xl glass border border-white/10 hover:border-accent-purple/50 transition-all text-accent-purple">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button id="rtl-toggle" class="px-4 h-10 flex items-center justify-center rounded-xl glass border border-white/10 hover:border-accent-purple/50 transition-all text-xs font-bold uppercase tracking-wider">
+                    RTL
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center px-4 pt-32 pb-20">
+        <!-- Center Auth Card -->
+        <div class="max-w-md w-full glass rounded-[2.5rem] border border-white/10 p-8 md:p-12 shadow-2xl relative z-10 fade-up">
+            <!-- Branding Inside Card -->
+            <div class="flex justify-center mb-10">
+                <a href="index.html" class="brand-container no-underline hover:opacity-80 transition-opacity">
+                    <i class="fas fa-meteor brand-icon"></i>
+                    <span class="brand-name">STELLAR</span>
+                </a>
+            </div>
+
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-extrabold mb-2 tracking-tight">Welcome <span class="text-accent-purple">Back</span></h2>
+                <p class="text-muted text-sm">Enter your cosmic credentials to continue.</p>
+            </div>
+
+            <!-- Login Form -->
+            <form class="space-y-6">
+                <div class="space-y-2">
+                    <label class="block text-xs font-bold text-main opacity-80 uppercase tracking-widest ml-1">Email Address</label>
+                    <div class="relative group">
+                        <i class="fas fa-envelope absolute left-5 top-1/2 -translate-y-1/2 text-main opacity-40 group-focus-within:text-accent-purple transition-colors"></i>
+                        <input type="email" placeholder="explorer@stellar.com" class="w-full bg-white/5 border border-white/10 px-14 py-4 rounded-2xl focus:outline-none focus:border-accent-purple/50 focus:ring-4 focus:ring-accent-purple/10 transition-all text-main placeholder:text-main placeholder:opacity-30">
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <label class="block text-xs font-bold text-main opacity-80 uppercase tracking-widest ml-1">Password</label>
+                    <div class="relative group">
+                        <i class="fas fa-lock absolute left-5 top-1/2 -translate-y-1/2 text-main opacity-40 group-focus-within:text-accent-purple transition-colors"></i>
+                        <input type="password" placeholder="••••••••" class="w-full bg-white/5 border border-white/10 px-14 py-4 rounded-2xl focus:outline-none focus:border-accent-purple/50 focus:ring-4 focus:ring-accent-purple/10 transition-all text-main placeholder:text-main placeholder:opacity-30">
+                        <button type="button" class="toggle-password absolute right-5 top-1/2 -translate-y-1/2 text-main opacity-40 hover:text-accent-purple transition-colors">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between text-sm py-2">
+                    <label class="flex items-center gap-3 cursor-pointer group">
+                        <div class="relative w-5 h-5 flex items-center justify-center">
+                            <input type="checkbox" class="peer appearance-none w-5 h-5 border border-white/10 rounded bg-white/5 checked:bg-accent-purple checked:border-accent-purple transition-all">
+                            <i class="fas fa-check absolute text-[10px] text-white opacity-0 peer-checked:opacity-100 transition-opacity"></i>
+                        </div>
+                        <span class="text-muted group-hover:text-main transition-colors">Remember Me</span>
+                    </label>
+                    <a href="#" class="text-accent-purple font-bold hover:text-accent-purple/80 transition-colors">Forgot?</a>
+                </div>
+
+                <button class="btn-premium btn-primary w-full py-4 text-lg font-bold shadow-lg shadow-accent-purple/20 hover:scale-[1.02] transition-transform">Log In</button>
+            </form>
+
+            <!-- Social Login Section -->
+            <div class="mt-10">
+                <div class="relative flex items-center justify-center mb-8">
+                    <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-white/10"></div></div>
+                    <span class="relative px-6 glass border border-white/10 rounded-full text-[10px] text-muted font-bold uppercase tracking-widest">Or Continue With</span>
+                </div>
+                
+                <div class="grid grid-cols-3 gap-4">
+                    <button class="flex items-center justify-center py-4 rounded-2xl glass border border-white/10 hover:bg-accent-purple transition-all duration-300 group">
+                        <i class="fab fa-google text-accent-purple group-hover:text-white transition-colors text-xl"></i>
+                    </button>
+                    <button class="flex items-center justify-center py-4 rounded-2xl glass border border-white/10 hover:bg-accent-purple transition-all duration-300 group">
+                        <i class="fab fa-facebook text-accent-purple group-hover:text-white transition-colors text-xl"></i>
+                    </button>
+                    <button class="flex items-center justify-center py-4 rounded-2xl glass border border-white/10 hover:bg-accent-purple transition-all duration-300 group">
+                        <i class="fab fa-apple text-main group-hover:text-white transition-colors text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="mt-10 text-center">
+                <p class="text-sm text-muted">Don't have an account? <a href="signup.html" class="text-accent-purple font-bold hover:underline ml-1">Create Account</a></p>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
