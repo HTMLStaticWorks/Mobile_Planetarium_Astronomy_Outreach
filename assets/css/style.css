@@ -345,6 +345,11 @@ body.light .hero-overlay,
     text-align: center;
     gap: 0.5rem;
     color: #ffffff; /* Default to white text for dark backgrounds */
+    border: 1px solid transparent; /* Ensure consistent box model with btn-glass */
+}
+
+[data-theme="light"] .btn-premium {
+    border-width: 2px; /* Match light mode btn-glass border width */
 }
 
 [data-theme="light"] .btn-premium:not(.btn-primary) {
@@ -363,6 +368,11 @@ body.light .hero-overlay,
     background-color: var(--accent);
     color: #ffffff !important;
     box-shadow: 0 4px 14px 0 rgba(109, 94, 243, 0.3);
+    border: 1px solid transparent;
+}
+
+[data-theme="light"] .btn-primary {
+    border: 2px solid transparent !important;
 }
 
 .btn-primary:hover {

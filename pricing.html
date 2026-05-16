@@ -49,10 +49,10 @@
     <section class="py-24">
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- Card 1 -->
-            <div class="glass p-8 rounded-3xl border border-white/5 hover:border-accent-purple transition-all fade-up flex flex-col h-full">
+            <div class="glass p-8 rounded-3xl border border-white/5 hover:border-accent-purple transition-all fade-up flex flex-col h-full text-center">
                 <h4 class="text-xl font-bold mb-2">School Assembly</h4>
                 <p class="text-slate-500 text-sm mb-6">Perfect for multiple grade levels.</p>
-                <div class="flex items-baseline mb-8">
+                <div class="flex items-baseline justify-center mb-8">
                     <span class="text-4xl font-extrabold text-main">$599</span>
                     <span class="text-sm font-normal text-slate-500 ml-2">/day</span>
                 </div>
@@ -66,11 +66,11 @@
                 </div>
             </div>
             <!-- Card 2 -->
-            <div class="glass p-8 rounded-3xl border-2 border-accent-purple relative fade-up flex flex-col h-full" style="animation-delay: 0.1s;">
+            <div class="glass p-8 rounded-3xl border-2 border-accent-purple relative fade-up flex flex-col h-full text-center" style="animation-delay: 0.1s;">
                 <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent-purple text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg shadow-purple-500/30">Popular</div>
                 <h4 class="text-xl font-bold mb-2">Birthday Package</h4>
                 <p class="text-slate-500 text-sm mb-6">Unforgettable private party.</p>
-                <div class="flex items-baseline mb-8">
+                <div class="flex items-baseline justify-center mb-8">
                     <span class="text-4xl font-extrabold text-main">$349</span>
                     <span class="text-sm font-normal text-slate-500 ml-2">/event</span>
                 </div>
@@ -84,10 +84,10 @@
                 </div>
             </div>
             <!-- Card 3 -->
-            <div class="glass p-8 rounded-3xl border border-white/5 hover:border-accent-purple transition-all fade-up flex flex-col h-full" style="animation-delay: 0.2s;">
+            <div class="glass p-8 rounded-3xl border border-white/5 hover:border-accent-purple transition-all fade-up flex flex-col h-full text-center" style="animation-delay: 0.2s;">
                 <h4 class="text-xl font-bold mb-2">Telescope Add-on</h4>
                 <p class="text-slate-500 text-sm mb-6">Night sky observation.</p>
-                <div class="flex items-baseline mb-8">
+                <div class="flex items-baseline justify-center mb-8">
                     <span class="text-4xl font-extrabold text-main">$199</span>
                     <span class="text-sm font-normal text-slate-500 ml-2">/session</span>
                 </div>
@@ -101,10 +101,10 @@
                 </div>
             </div>
             <!-- Card 4 -->
-            <div class="glass p-8 rounded-3xl border border-white/5 hover:border-accent-purple transition-all fade-up flex flex-col h-full" style="animation-delay: 0.3s;">
+            <div class="glass p-8 rounded-[2rem] border border-white/5 hover:border-accent-purple transition-all fade-up flex flex-col h-full text-center" style="animation-delay: 0.3s;">
                 <h4 class="text-xl font-bold mb-2">Full Day Outreach</h4>
                 <p class="text-slate-500 text-sm mb-6">Complete STEM immersion.</p>
-                <div class="flex items-baseline mb-8">
+                <div class="flex items-baseline justify-center mb-8">
                     <span class="text-4xl font-extrabold text-main">$899</span>
                     <span class="text-sm font-normal text-slate-500 ml-2">/day</span>
                 </div>
@@ -128,31 +128,37 @@
                     <h2 class="text-4xl font-bold mb-6">Service <span class="text-accent-purple">Radius</span></h2>
                     <p class="text-slate-300 text-lg mb-8">We are based in Houston but travel across the state. Check our service distance cards below for travel fees.</p>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div class="glass p-6 rounded-2xl flex flex-col items-center justify-center text-center gap-6 hover:border-accent-purple transition-all duration-300 shadow-lg">
-                            <div>
-                                <h5 class="text-lg font-bold">Zone 1 (0-30 mi)</h5>
-                                <p class="text-xs text-slate-400">Free Travel Inclusion</p>
-                            </div>
-                            <div class="w-16 h-16 bg-accent-purple/10 rounded-2xl flex items-center justify-center flex-shrink-0 border border-accent-purple/20">
+                        <!-- Zone 1 -->
+                        <div class="glass p-6 rounded-2xl flex flex-col items-center text-center gap-4 hover:border-accent-purple transition-all duration-300 shadow-lg group">
+                            <div class="w-16 h-16 bg-accent-purple/10 rounded-2xl flex items-center justify-center flex-shrink-0 border border-accent-purple/20 group-hover:scale-110 transition-transform duration-300">
                                 <i class="fas fa-truck-fast text-3xl text-accent-purple"></i>
                             </div>
-                        </div>
-                        <div class="glass p-6 rounded-2xl flex flex-col items-center justify-center text-center gap-6 hover:border-accent-purple transition-all duration-300 shadow-lg">
                             <div>
-                                <h5 class="text-lg font-bold">Zone 2 (31-60 mi)</h5>
-                                <p class="text-xs text-slate-400">$50 Standard Fee</p>
+                                <h5 class="text-lg font-bold">Zone 1</h5>
+                                <p class="text-xs text-accent-purple font-semibold mb-1">(0-30 mi)</p>
+                                <p class="text-xs text-slate-400">Free Travel Inclusion</p>
                             </div>
-                            <div class="w-16 h-16 bg-accent-purple/10 rounded-2xl flex items-center justify-center flex-shrink-0 border border-accent-purple/20">
+                        </div>
+                        <!-- Zone 2 -->
+                        <div class="glass p-6 rounded-2xl flex flex-col items-center text-center gap-4 hover:border-accent-purple transition-all duration-300 shadow-lg group">
+                            <div class="w-16 h-16 bg-accent-purple/10 rounded-2xl flex items-center justify-center flex-shrink-0 border border-accent-purple/20 group-hover:scale-110 transition-transform duration-300">
                                 <i class="fas fa-truck text-3xl text-accent-purple"></i>
                             </div>
-                        </div>
-                        <div class="glass p-6 rounded-2xl flex flex-col items-center justify-center text-center gap-6 hover:border-accent-purple transition-all duration-300 shadow-lg">
                             <div>
-                                <h5 class="text-lg font-bold">Zone 3 (60+ mi)</h5>
-                                <p class="text-xs text-slate-400">Custom Distance Quote</p>
+                                <h5 class="text-lg font-bold">Zone 2</h5>
+                                <p class="text-xs text-accent-purple font-semibold mb-1">(31-60 mi)</p>
+                                <p class="text-xs text-slate-400">$50 Standard Fee</p>
                             </div>
-                            <div class="w-16 h-16 bg-accent-purple/10 rounded-2xl flex items-center justify-center flex-shrink-0 border border-accent-purple/20">
+                        </div>
+                        <!-- Zone 3 -->
+                        <div class="glass p-6 rounded-2xl flex flex-col items-center text-center gap-4 hover:border-accent-purple transition-all duration-300 shadow-lg group">
+                            <div class="w-16 h-16 bg-accent-purple/10 rounded-2xl flex items-center justify-center flex-shrink-0 border border-accent-purple/20 group-hover:scale-110 transition-transform duration-300">
                                 <i class="fas fa-map-location-dot text-3xl text-accent-purple"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-lg font-bold">Zone 3</h5>
+                                <p class="text-xs text-accent-purple font-semibold mb-1">(60+ mi)</p>
+                                <p class="text-xs text-slate-400">Custom Distance Quote</p>
                             </div>
                         </div>
                     </div>
