@@ -28,13 +28,16 @@
 
     <section class="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="assets/images/classroom_astronomy.png" alt="Astronomy Classroom" class="w-full h-full object-cover">
+            <img src="assets/images/classroom_astronomy.png" alt="Astronomy Classroom" class="w-full h-full object-cover object-top md:object-center">
             <div class="absolute inset-0 hero-overlay"></div>
         </div>
         
         <div class="relative z-10 max-w-7xl mx-auto px-4 w-full text-center">
             <div class="max-w-3xl mx-auto fade-up">
-                <span class="text-accent-purple font-bold tracking-widest uppercase text-sm mb-4 block">Educator Focused Outreach</span>
+                <div class="inline-flex items-center gap-2 bg-black/50 backdrop-blur-md border border-accent-purple/40 rounded-full px-5 py-2 mb-6 mx-auto">
+                    <span class="w-1.5 h-1.5 rounded-full bg-accent-purple animate-pulse inline-block"></span>
+                    <span class="text-accent-purple font-bold tracking-widest uppercase text-xs">Educator Focused Outreach</span>
+                </div>
                 <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-6 leading-tight hero-title">
                     Empowering the <br>
                     <span>Next Generation</span> <br>
@@ -54,60 +57,76 @@
     <div class="relative overflow-hidden">
         <div class="stars-container"><div class="stars"></div><div class="twinkling"></div></div>
 
-        <!-- Dome Show Catalog Section -->
+        <!-- Educator Resource Hub Section -->
         <section class="py-24 relative z-10">
             <div class="max-w-7xl mx-auto px-4">
                 <div class="flex flex-col md:flex-row justify-between items-center md:items-end mb-16 gap-6 fade-up">
                     <div class="text-center md:text-left">
-                        <span class="text-accent-purple font-bold tracking-widest text-xs uppercase block mb-3">CURRICULUM IN ACTION</span>
-                        <h2 class="text-4xl font-extrabold mb-4">Dome Show Catalog</h2>
-                        <p class="text-slate-400">Cinematic journeys through the cosmos tailored for educators.</p>
+                        <span class="text-accent-purple font-bold tracking-widest text-xs uppercase block mb-3">EDUCATOR RESOURCE HUB</span>
+                        <h2 class="text-4xl font-extrabold mb-4">Lesson Plans & Curricula Resources</h2>
+                        <p class="text-slate-400">Free, standard-aligned classroom materials to maximize the impact of your planetarium outreach event.</p>
                     </div>
-                    <a href="dome-shows.html" class="text-accent-purple font-bold flex items-center gap-2 hover:gap-4 transition-all duration-300">
-                        View All Shows <i class="fas fa-arrow-right"></i>
+                    <a href="#" class="text-accent-purple font-bold flex items-center gap-2 hover:gap-4 transition-all duration-300">
+                        View All Resources <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Show 1 -->
-                    <div class="group relative overflow-hidden rounded-2xl aspect-video md:aspect-[4/3] border border-white/5 transition-all duration-350 hover:border-accent-purple/30 fade-up">
-                        <img src="https://images.unsplash.com/photo-1464802686167-b939a6910659?auto=format&fit=crop&q=80&w=800" alt="Galaxy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-space-900 via-space-900/40 to-transparent"></div>
-                        <div class="absolute bottom-0 p-6 dark-card">
-                            <span class="text-[9px] font-bold bg-accent-purple text-space-900 px-2 py-0.5 rounded mb-2 inline-block uppercase">Most Popular</span>
-                            <h3 class="text-lg font-bold">Galaxy Explorer</h3>
-                            <p class="text-xs text-slate-300 mt-1 leading-relaxed">A journey to the edge of the known universe.</p>
+                <div class="grid grid-cols-2 xl:grid-cols-4 gap-4 md:gap-6">
+                    <!-- Resource 1 -->
+                    <div class="glass p-6 rounded-3xl border border-white/5 hover:border-accent-purple/30 transition-all duration-350 flex flex-col justify-between fade-up">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-accent-purple/10 flex items-center justify-center text-accent-purple mb-6">
+                                <i class="fas fa-file-pdf text-xl"></i>
+                            </div>
+                            <span class="text-[9px] font-bold bg-accent-purple text-white px-2 py-0.5 rounded mb-3 inline-block uppercase tracking-wider">TEKS & NGSS</span>
+                            <h3 class="text-lg font-bold mb-2">Pre-Visit Lesson Plans</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-6">Prime your students' curiosity with introductory astronomical concepts and interactive classroom worksheets.</p>
                         </div>
+                        <a href="#" class="text-accent-purple text-xs font-bold flex items-center gap-1.5 hover:gap-2.5 transition-all">
+                            Download PDF <i class="fas fa-download text-[10px]"></i>
+                        </a>
                     </div>
-                    <!-- Show 2 -->
-                    <div class="group relative overflow-hidden rounded-2xl aspect-video md:aspect-[4/3] border border-white/5 transition-all duration-350 hover:border-accent-purple/30 fade-up" style="animation-delay: 0.1s;">
-                        <img src="https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&q=80&w=800" alt="Mars" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-space-900 via-space-900/40 to-transparent"></div>
-                        <div class="absolute bottom-0 p-6 dark-card">
-                            <span class="text-[9px] font-bold bg-accent-purple text-space-900 px-2 py-0.5 rounded mb-2 inline-block uppercase">STEM Ready</span>
-                            <h3 class="text-lg font-bold">Mission to Mars</h3>
-                            <p class="text-xs text-slate-300 mt-1 leading-relaxed">The science of colonizing the red planet.</p>
+                    <!-- Resource 2 -->
+                    <div class="glass p-6 rounded-3xl border border-white/5 hover:border-accent-purple/30 transition-all duration-350 flex flex-col justify-between fade-up" style="animation-delay: 0.1s;">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 mb-6">
+                                <i class="fas fa-clipboard-question text-xl"></i>
+                            </div>
+                            <span class="text-[9px] font-bold bg-indigo-500 text-white px-2 py-0.5 rounded mb-3 inline-block uppercase tracking-wider">Assessment</span>
+                            <h3 class="text-lg font-bold mb-2">Reflection Activities</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-6">Reinforce astronomy lessons with structured post-visit discussion guides, quiz sheets, and review materials.</p>
                         </div>
+                        <a href="#" class="text-indigo-400 text-xs font-bold flex items-center gap-1.5 hover:gap-2.5 transition-all">
+                            Download Pack <i class="fas fa-download text-[10px]"></i>
+                        </a>
                     </div>
-                    <!-- Show 3 -->
-                    <div class="group relative overflow-hidden rounded-2xl aspect-video md:aspect-[4/3] border border-white/5 transition-all duration-350 hover:border-accent-purple/30 fade-up" style="animation-delay: 0.2s;">
-                        <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&q=80&w=800" alt="Black Hole" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-space-900 via-space-900/40 to-transparent"></div>
-                        <div class="absolute bottom-0 p-6 dark-card">
-                            <span class="text-[9px] font-bold bg-accent-purple text-space-900 px-2 py-0.5 rounded mb-2 inline-block uppercase">Advanced</span>
-                            <h3 class="text-lg font-bold">Black Hole Paradox</h3>
-                            <p class="text-xs text-slate-300 mt-1 leading-relaxed">Understanding the gravity of space-time.</p>
+                    <!-- Resource 3 -->
+                    <div class="glass p-6 rounded-3xl border border-white/5 hover:border-accent-purple/30 transition-all duration-350 flex flex-col justify-between fade-up" style="animation-delay: 0.2s;">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-pink-500/10 flex items-center justify-center text-pink-400 mb-6">
+                                <i class="fas fa-map text-xl"></i>
+                            </div>
+                            <span class="text-[9px] font-bold bg-pink-500 text-white px-2 py-0.5 rounded mb-3 inline-block uppercase tracking-wider">Printable</span>
+                            <h3 class="text-lg font-bold mb-2">Interactive Star Charts</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-6">Take-home sky maps allowing students to locate active constellations and visible planets from their own backyard.</p>
                         </div>
+                        <a href="#" class="text-pink-400 text-xs font-bold flex items-center gap-1.5 hover:gap-2.5 transition-all">
+                            Download Chart <i class="fas fa-download text-[10px]"></i>
+                        </a>
                     </div>
-                    <!-- Show 4 -->
-                    <div class="group relative overflow-hidden rounded-2xl aspect-video md:aspect-[4/3] border border-white/5 transition-all duration-350 hover:border-accent-purple/30 fade-up" style="animation-delay: 0.3s;">
-                        <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?auto=format&fit=crop&q=80&w=800" alt="Solar System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-space-900 via-space-900/40 to-transparent"></div>
-                        <div class="absolute bottom-0 p-6 dark-card">
-                            <span class="text-[9px] font-bold bg-accent-purple text-space-900 px-2 py-0.5 rounded mb-2 inline-block uppercase">For Kids</span>
-                            <h3 class="text-lg font-bold">Solar System Tour</h3>
-                            <p class="text-xs text-slate-300 mt-1 leading-relaxed">Visit every planet in our cosmic backyard.</p>
+                    <!-- Resource 4 -->
+                    <div class="glass p-6 rounded-3xl border border-white/5 hover:border-accent-purple/30 transition-all duration-350 flex flex-col justify-between fade-up" style="animation-delay: 0.3s;">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-6">
+                                <i class="fas fa-hand-holding-dollar text-xl"></i>
+                            </div>
+                            <span class="text-[9px] font-bold bg-emerald-500 text-white px-2 py-0.5 rounded mb-3 inline-block uppercase tracking-wider">Grants</span>
+                            <h3 class="text-lg font-bold mb-2">Funding Request Pack</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-6">Customize ready-to-send proposal templates to request district funding, school board approval, or PTA grants.</p>
                         </div>
+                        <a href="#" class="text-emerald-400 text-xs font-bold flex items-center gap-1.5 hover:gap-2.5 transition-all">
+                            Download Template <i class="fas fa-download text-[10px]"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -116,7 +135,7 @@
         <!-- Telescope Experience Section -->
         <section class="py-24 section-bg relative z-10">
             <div class="max-w-7xl mx-auto px-4">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="grid grid-cols-1 xl:grid-cols-2 gap-16 items-center">
                     <div class="fade-up">
                         <span class="text-accent-purple font-bold tracking-widest text-xs uppercase block mb-3">HIGH-POWER OPTICS</span>
                         <h2 class="text-4xl font-extrabold mb-6">Unveiling the <span class="text-accent-purple">Invisible Sky</span></h2>
@@ -161,9 +180,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="fade-up flex justify-center lg:justify-end">
+                    <div class="fade-up flex justify-center xl:justify-end">
                         <div class="relative max-w-2xl w-full rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/10">
-                            <img src="assets/images/telescope_night.png" alt="Telescope Experience" class="w-full h-[400px] lg:h-[480px] object-cover hover:scale-103 transition-transform duration-700">
+                            <img src="assets/images/telescope_night.png" alt="Telescope Experience" class="w-full h-[400px] xl:h-[480px] object-cover hover:scale-103 transition-transform duration-700">
                             <div class="absolute inset-0 bg-gradient-to-t from-space-900/60 to-transparent"></div>
                         </div>
                     </div>
@@ -180,7 +199,7 @@
             </div>
             
             <div class="max-w-5xl mx-auto glass p-8 rounded-[2rem] border border-white/10 fade-up">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 mb-12">
                     <div class="bg-space-900/50 p-6 rounded-2xl border border-white/5 flex flex-col justify-center text-center">
                         <p class="text-slate-500 text-xs font-bold mb-2 uppercase tracking-wider">Engagement Growth</p>
                         <p class="text-3xl font-extrabold text-accent-purple">+124% <i class="fas fa-chart-line text-lg ml-2"></i></p>
@@ -189,7 +208,7 @@
                         <p class="text-slate-500 text-xs font-bold mb-2 uppercase tracking-wider">Teacher Satisfaction</p>
                         <p class="text-3xl font-extrabold text-accent-purple">4.9/5 <i class="fas fa-star text-lg ml-2"></i></p>
                     </div>
-                    <div class="bg-space-900/50 p-6 rounded-2xl border border-white/5 flex flex-col justify-center text-center">
+                    <div class="bg-space-900/50 p-6 rounded-2xl border border-white/5 flex flex-col justify-center text-center sm:col-span-2 xl:col-span-1 sm:max-w-md sm:mx-auto xl:w-auto xl:max-w-none w-full">
                         <p class="text-slate-500 text-xs font-bold mb-2 uppercase tracking-wider">Regions Covered</p>
                         <p class="text-3xl font-extrabold text-accent-purple">12 <i class="fas fa-map-marked text-lg ml-2"></i></p>
                     </div>
@@ -222,17 +241,17 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div class="glass p-8 rounded-[2rem] border border-white/5 hover:border-accent-purple/30 transition-all duration-300 fade-up">
                         <div class="text-accent-purple font-bold mb-3 text-xs tracking-wider uppercase">May 24, 2026</div>
-                        <h4 class="text-2xl font-bold mb-3 text-white">Lunar Occultation</h4>
+                        <h4 class="text-2xl font-bold mb-3" style="color: var(--text-main);">Lunar Occultation</h4>
                         <p class="text-slate-400 leading-relaxed text-sm">A rare event where the Moon passes in front of the bright star Spica. Visible through backyard scopes.</p>
                     </div>
                     <div class="glass p-8 rounded-[2rem] border border-white/5 hover:border-accent-purple/30 transition-all duration-300 fade-up" style="animation-delay: 0.1s;">
                         <div class="text-accent-purple font-bold mb-3 text-xs tracking-wider uppercase">Jun 02, 2026</div>
-                        <h4 class="text-2xl font-bold mb-3 text-white">Mars & Neptune</h4>
+                        <h4 class="text-2xl font-bold mb-3" style="color: var(--text-main);">Mars & Neptune</h4>
                         <p class="text-slate-400 leading-relaxed text-sm">Two planets appearing extremely close together in the pre-dawn sky. Outstanding tracking target.</p>
                     </div>
                     <div class="glass p-8 rounded-[2rem] border border-white/5 hover:border-accent-purple/30 transition-all duration-300 fade-up md:col-span-2 lg:col-span-1 md:max-w-md md:mx-auto lg:max-w-none lg:mx-0" style="animation-delay: 0.2s;">
                         <div class="text-accent-purple font-bold mb-3 text-xs tracking-wider uppercase">Jun 21, 2026</div>
-                        <h4 class="text-2xl font-bold mb-3 text-white">Summer Solstice</h4>
+                        <h4 class="text-2xl font-bold mb-3" style="color: var(--text-main);">Summer Solstice</h4>
                         <p class="text-slate-400 leading-relaxed text-sm">The longest day of the year and peak time for specialized H-alpha solar telescope observations.</p>
                     </div>
                 </div>

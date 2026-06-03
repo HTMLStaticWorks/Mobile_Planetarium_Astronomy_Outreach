@@ -125,27 +125,13 @@ p {
     background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(109, 94, 243, 0.4));
 }
 
-body.light .hero-overlay,
-[data-theme="light"] .hero-overlay {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.65)) !important;
-    backdrop-filter: blur(4px);
-    z-index: 1;
-}
-
-[data-theme="light"] .hero-title {
-    color: #0f172a !important;
-}
-
-[data-theme="light"] .hero-text {
-    color: #1e293b !important;
-}
-
 .hero-title {
     color: #ffffff;
 }
 
 .hero-text {
-    color: var(--text-muted);
+    color: #f1f5f9 !important;
+    opacity: 0.95 !important;
 }
 
 .section-bg {
@@ -164,6 +150,46 @@ body.light .hero-overlay,
 .footer-bg {
     background-color: var(--primary);
     border-top: 1px solid var(--glass-border);
+    padding-top: 3rem !important; /* pt-12 (48px) on mobile */
+    padding-bottom: 2rem !important; /* pb-8 (32px) on mobile */
+}
+
+@media (min-width: 768px) {
+    .footer-bg {
+        padding-top: 4rem !important; /* pt-16 (64px) on tablet */
+        padding-bottom: 2.5rem !important; /* pb-10 (40px) on tablet */
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-bg {
+        padding-top: 6rem !important; /* pt-24 (96px) on desktop */
+        padding-bottom: 3rem !important; /* pb-12 (48px) on desktop */
+    }
+}
+
+/* Responsive grid spacing inside footer */
+.footer-bg .grid {
+    gap: 2rem !important; /* gap-8 (32px) on mobile */
+    margin-bottom: 2.5rem !important; /* mb-10 (40px) on mobile */
+}
+
+@media (min-width: 768px) {
+    .footer-bg .grid {
+        gap: 3rem !important; /* gap-12 (48px) on tablet/desktop */
+        margin-bottom: 4rem !important; /* mb-16 (64px) on tablet/desktop */
+    }
+}
+
+/* Responsive copyright section top padding */
+.footer-bg div.pt-12 {
+    padding-top: 2rem !important; /* pt-8 (32px) on mobile */
+}
+
+@media (min-width: 768px) {
+    .footer-bg div.pt-12 {
+        padding-top: 3rem !important; /* pt-12 (48px) on tablet/desktop */
+    }
 }
 
 [data-theme="light"] .footer-bg {
@@ -213,7 +239,11 @@ body.light .hero-overlay,
 [dir="rtl"] .mr-auto { margin-left: auto !important; margin-right: 0 !important; }
 [dir="rtl"] .text-left { text-align: right !important; }
 [dir="rtl"] .text-right { text-align: left !important; }
-[dir="rtl"] .brand-container { flex-direction: row-reverse !important; }
+
+/* Brand container RTL:
+   In RTL documents, direction:rtl already reverses flex-direction:row so first
+   DOM child (icon) appears on the RIGHT and text on the LEFT — correct RTL layout.
+   DO NOT add row-reverse here — that would double-flip it back to LTR order. */
 [dir="rtl"] .brand-container .brand-name { letter-spacing: 0 !important; }
 
 /* Fix Tailwind space-x for RTL */
@@ -224,6 +254,19 @@ body.light .hero-overlay,
 [dir="rtl"] .space-x-5 > :not([hidden]) ~ :not([hidden]) { margin-left: 0 !important; margin-right: 1.25rem !important; }
 [dir="rtl"] .space-x-6 > :not([hidden]) ~ :not([hidden]) { margin-left: 0 !important; margin-right: 1.5rem !important; }
 [dir="rtl"] .space-x-8 > :not([hidden]) ~ :not([hidden]) { margin-left: 0 !important; margin-right: 2rem !important; }
+
+/* RTL: Newsletter email form — swap rounded corners & border gap.
+   In RTL, direction:rtl visually places [Join btn LEFT] [input RIGHT].
+   Input (on RIGHT) needs right-side rounding; button (on LEFT) needs left-side rounding. */
+[dir="rtl"] .footer-bg form input[type="email"] {
+    border-radius: 0 0.5rem 0.5rem 0 !important; /* round the RIGHT side */
+    border-right-width: 1px !important;            /* restore right border */
+    border-left-width: 0 !important;              /* gap on LEFT where button joins */
+    text-align: right;
+}
+[dir="rtl"] .footer-bg form button {
+    border-radius: 0.5rem 0 0 0.5rem !important;  /* round the LEFT side */
+}
 
 [data-theme="light"] .auth-input {
     background-color: #f1f5f9 !important;
@@ -352,7 +395,7 @@ body.light .hero-overlay,
     border-width: 2px; /* Match light mode btn-glass border width */
 }
 
-[data-theme="light"] .btn-premium:not(.btn-primary) {
+[data-theme="light"] .btn-premium:not(.btn-primary):not(.bg-accent-purple):not(.bg-indigo-500):not(.bg-pink-500) {
     color: var(--accent);
 }
 
@@ -495,19 +538,132 @@ body.light .btn-premium:not(.btn-primary):hover i {
     margin: 0 0.25rem !important;
 }
 
-/* Light Mode Overrides for Slate Classes */
+/* ============================================================
+   LIGHT MODE — COMPREHENSIVE TEXT VISIBILITY FIXES
+   ============================================================ */
+
+/* Slate utility overrides */
 [data-theme="light"] .text-slate-100 { color: var(--text-main) !important; }
+[data-theme="light"] .text-slate-200 { color: #1e293b !important; }
 [data-theme="light"] .text-slate-300 { color: var(--text-muted) !important; }
-[data-theme="light"] .text-slate-400 { color: var(--text-muted) !important; }
+[data-theme="light"] .text-slate-400 { color: #475569 !important; }
 [data-theme="light"] .text-slate-500 { color: #64748b !important; }
 
-/* Force White Text for Dark Background Elements (Catalog Cards, etc.) */
+/* text-white → dark in light mode globally; exceptions re-whittened below */
+[data-theme="light"] .text-white {
+    color: var(--text-main) !important;
+}
+
+/* Headings & paragraphs — ensure they inherit CSS variables properly */
+[data-theme="light"] h1:not(.hero-title),
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4,
+[data-theme="light"] h5,
+[data-theme="light"] h6 {
+    color: var(--text-main) !important;
+}
+
+/* Paragraphs — make dark in light mode, but NOT if they carry their own accent/color class */
+[data-theme="light"] p:not(.text-accent-purple):not(.text-emerald-400):not(.text-pink-500) {
+    color: var(--text-muted) !important;
+}
+
+/* Restore accent-purple paragraphs in light mode (stat values, labels, etc.) */
+[data-theme="light"] p.text-accent-purple {
+    color: var(--accent) !important;
+}
+/* Also restore for div/span elements with accent class just in case */
+[data-theme="light"] div.text-accent-purple,
+[data-theme="light"] span.text-accent-purple {
+    color: var(--accent) !important;
+}
+
+/* Bento cards — headings & text */
+[data-theme="light"] .bento-card h3,
+[data-theme="light"] .bento-card h4,
+[data-theme="light"] .bento-card p,
+[data-theme="light"] .bento-card li,
+[data-theme="light"] .bento-card span:not(.bg-accent-purple):not(.bg-indigo-500):not(.bg-pink-500):not(.absolute) {
+    color: var(--text-main) !important;
+}
+
+[data-theme="light"] .bento-card .text-slate-400 { color: #475569 !important; }
+[data-theme="light"] .bento-card .text-slate-300 { color: #475569 !important; }
+[data-theme="light"] .bento-card .text-slate-500 { color: #64748b !important; }
+
+/* Stat numbers inside bento (500+, K-12 mini stats) */
+[data-theme="light"] .bento-card .bg-white\/5 p.text-accent-purple { color: var(--accent) !important; }
+[data-theme="light"] .bento-card .bg-white\/5 p.text-slate-500 { color: #64748b !important; }
+
+/* Glass cards (simulator, stargazing widget, dome setup) */
+[data-theme="light"] .glass h3,
+[data-theme="light"] .glass h4,
+[data-theme="light"] .glass p,
+[data-theme="light"] .glass li,
+[data-theme="light"] .glass span:not(.bg-accent-purple):not(.absolute):not(.text-accent-purple) {
+    color: var(--text-main) !important;
+}
+[data-theme="light"] .glass .text-slate-300 { color: #475569 !important; }
+[data-theme="light"] .glass .text-slate-400 { color: #475569 !important; }
+[data-theme="light"] .glass .text-slate-500 { color: #64748b !important; }
+[data-theme="light"] .glass .text-white { color: var(--text-main) !important; }
+[data-theme="light"] .glass .text-emerald-400 { color: #059669 !important; }
+[data-theme="light"] .glass .font-mono { color: var(--accent) !important; }
+
+/* Telemetry stats rings — stat numbers */
+[data-theme="light"] .stat-ring-content { color: #0f172a !important; }
+[data-theme="light"] .text-slate-400.font-bold.text-xs.uppercase { color: #475569 !important; }
+
+/* Telescope simulator object description */
+[data-theme="light"] #telescope-sim-title { color: var(--text-main) !important; }
+[data-theme="light"] #telescope-sim-desc { color: var(--text-muted) !important; }
+[data-theme="light"] #telescope-sim-coords { color: var(--accent) !important; }
+[data-theme="light"] #moon-phase-name { color: var(--text-main) !important; }
+
+/* Outreach Workflow steps */
+[data-theme="light"] .glass.p-10 h4 { color: var(--text-main) !important; }
+[data-theme="light"] .glass.p-10 p { color: #475569 !important; }
+[data-theme="light"] .glass.p-10 .w-12.h-12.bg-accent-purple { color: #ffffff !important; }
+
+/* Dome Setup requirement cards */
+[data-theme="light"] .glass.p-6 h4 { color: var(--text-main) !important; }
+[data-theme="light"] .glass.p-6 p { color: #475569 !important; }
+[data-theme="light"] .glass.p-6 strong { color: var(--text-main) !important; }
+
+/* Locations banner */
+[data-theme="light"] .glass.py-4 span { color: var(--text-muted) !important; }
+
+/* Section headings (the OUTREACH SOLUTIONS, DIGITAL OBSERVATORY labels) */
+[data-theme="light"] span.text-accent-purple { color: var(--accent) !important; }
+
+/* Dome Show Catalog filter buttons — non-active state */
+[data-theme="light"] .catalog-filter-btn.glass {
+    color: var(--accent) !important;
+}
+
+/* Testimonials */
+[data-theme="light"] .glass.p-8 p.italic { color: #334155 !important; }
+[data-theme="light"] .glass.p-8 p.font-bold { color: var(--text-main) !important; }
+[data-theme="light"] .glass.p-8 p.text-xs.text-slate-500 { color: #64748b !important; }
+
+/* Dome Setup section text column */
+[data-theme="light"] .lg\:col-span-5 p { color: #475569 !important; }
+[data-theme="light"] .lg\:col-span-5 h2 { color: var(--text-main) !important; }
+
+/* Dome Show catalog card — these stay dark (dark-card class forces white) */
 .dark-card, .dark-card h1, .dark-card h2, .dark-card h3, .dark-card h4, .dark-card h5, .dark-card p, .dark-card span {
     color: #ffffff !important;
 }
-
 .dark-card .text-slate-300, .dark-card .text-slate-400 {
     color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Catalog show cards stay dark regardless of theme (they have a dark gradient overlay) */
+.catalog-show-card h3,
+.catalog-show-card p,
+.catalog-show-card span {
+    color: #ffffff !important;
 }
 
 /* Accordion Styles */
@@ -576,6 +732,20 @@ details[open] summary i {
     .hero-text {
         font-size: 1.125rem !important;
         margin-bottom: 2rem !important;
+    }
+}
+
+/* Mobile Hero Title & Spacing Adjustments */
+@media (max-width: 767px) {
+    .hero-title {
+        font-size: 2.25rem !important; /* 36px */
+        line-height: 1.2 !important;
+        margin-bottom: 1.25rem !important;
+    }
+
+    .hero-text {
+        font-size: 1rem !important;
+        margin-bottom: 1.75rem !important;
     }
 }
 
@@ -816,5 +986,303 @@ body.light #mobile-menu {
     bottom: 10%;
     width: 1px;
 }
+
+/* ============================================================
+   PROGRAMS BENTO GRID — LAYOUT SYSTEM
+   Desktop  : featured left (wide) + 3 stacked cards right
+   1024px   : 2×2 equal grid
+   Tablet   : 2-col grid
+   Mobile   : 1-col stack
+   ============================================================ */
+
+/* Default (desktop ≥ 1280px): asymmetric 2-column */
+.programs-bento-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.programs-featured {
+    /* tall featured card fills full left column height */
+    display: flex;
+    flex-direction: column;
+}
+
+.programs-featured-image {
+    width: 100%;
+    height: 260px;
+    flex-shrink: 0;
+}
+
+.programs-right-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Side cards: compact horizontal layout */
+.programs-side-card {
+    flex: 1;
+}
+
+.programs-side-img {
+    width: 110px;
+    height: 90px;
+    flex-shrink: 0;
+}
+
+/* 1024px – stack one by one (single column) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .programs-bento-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .programs-featured {
+        grid-column: span 1;
+    }
+
+    .programs-featured-image {
+        height: 260px;
+    }
+
+    .programs-right-col {
+        grid-column: span 1;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .programs-side-img {
+        width: 110px;
+        height: 90px;
+    }
+}
+
+/* Tablet (768px – 1023px): 2 equal columns, revert to stacked layout */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .programs-bento-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.25rem;
+    }
+
+    .programs-featured {
+        grid-column: 1 / -1; /* span full width */
+    }
+
+    .programs-featured-image {
+        height: 240px;
+    }
+
+    .programs-right-col {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    /* Last side card spans both cols on tablet if odd */
+    .programs-side-card:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .programs-side-img {
+        width: 100px;
+        height: 80px;
+    }
+}
+
+/* Mobile (< 768px): single column */
+@media (max-width: 767px) {
+    .programs-bento-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .programs-featured-image {
+        height: 200px;
+    }
+
+    .programs-right-col {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .programs-side-card .flex {
+        flex-direction: column;
+    }
+
+    .programs-side-img {
+        width: 100%;
+        height: 160px;
+    }
+}
+
+/* ============================================================
+   LIGHT MODE — DEFINITIVE text-white OVERRIDES
+   Strategy:
+     1. Override ALL text-white → dark (#0f172a)
+     2. Re-whiten anything on a colored/dark background
+   ============================================================ */
+
+/* ── Step 1: Make all text-white dark in light mode ── */
+[data-theme="light"] .text-white {
+    color: #0f172a !important;
+}
+
+/* ── Step 2: Re-whiten elements that MUST stay white ── */
+
+/* Hero stays white (dark overlay behind it) */
+[data-theme="light"] .hero-title,
+[data-theme="light"] .hero-text,
+[data-theme="light"] .hero-title span {
+    color: #ffffff !important;
+}
+
+/* btn-primary always white text */
+[data-theme="light"] .btn-primary {
+    color: #ffffff !important;
+}
+[data-theme="light"] .btn-primary * {
+    color: #ffffff !important;
+}
+
+/* Any element with bg-accent-purple background → white text */
+[data-theme="light"] .bg-accent-purple {
+    color: #ffffff !important;
+}
+[data-theme="light"] .bg-accent-purple * {
+    color: #ffffff !important;
+}
+
+/* bg-indigo-500 and bg-pink-500 badge spans → white */
+[data-theme="light"] .bg-indigo-500,
+[data-theme="light"] .bg-pink-500 {
+    color: #ffffff !important;
+}
+
+/* Catalog show cards — always dark overlay, always white text */
+[data-theme="light"] .dark-card,
+[data-theme="light"] .dark-card * {
+    color: #ffffff !important;
+}
+[data-theme="light"] .catalog-show-card h3,
+[data-theme="light"] .catalog-show-card p,
+[data-theme="light"] .catalog-show-card span {
+    color: #ffffff !important;
+}
+
+/* Stat ring numbers → dark (on light ring bg in light mode) */
+[data-theme="light"] .stat-ring-content {
+    color: #0f172a !important;
+}
+
+/* Moon phase name → dark (inside glass on white bg) */
+[data-theme="light"] #moon-phase-name {
+    color: #0f172a !important;
+}
+
+/* strong.text-white inside glass dome-setup cards → dark */
+[data-theme="light"] .glass strong.text-white {
+    color: #0f172a !important;
+    font-weight: 700;
+}
+
+/* "Saturn, Mars" and "Sunspots Active" spans inside glass → dark */
+[data-theme="light"] .glass span.text-white {
+    color: #0f172a !important;
+}
+
+/* Back-to-top button stays white (purple bg) */
+[data-theme="light"] #back-to-top {
+    color: #ffffff !important;
+}
+
+/* ============================================================
+   LIGHT MODE \u2014 HOME 2 DASHBOARD DARK CARDS
+   bg-space-900/50 and bg-space-900/80 are intentionally dark
+   data-widget cards \u2014 they must stay dark and readable in
+   light mode. Using [class*="bg-space-900/"] to match both
+   opacity variants without affecting the solid nav bg.
+   ============================================================ */
+
+/* Boost opacity so card is visibly dark on a light glass bg */
+[data-theme="light"] [class*="bg-space-900/"] {
+    background-color: rgba(15, 23, 42, 0.90) !important;
+}
+
+/* Label text inside dark cards \u2014 make white/muted */
+[data-theme="light"] [class*="bg-space-900/"] p.text-slate-500 {
+    color: rgba(255, 255, 255, 0.65) !important;
+}
+[data-theme="light"] [class*="bg-space-900/"] div.text-slate-500,
+[data-theme="light"] [class*="bg-space-900/"] div[class*="text-slate"] {
+    color: rgba(255, 255, 255, 0.55) !important;
+}
+[data-theme="light"] [class*="bg-space-900/"] p:not(.text-accent-purple) {
+    color: rgba(255, 255, 255, 0.75) !important;
+}
+
+/* Keep accent-purple values bright inside dark dashboard cards */
+[data-theme="light"] [class*="bg-space-900/"] p.text-accent-purple,
+[data-theme="light"] [class*="bg-space-900/"] p.text-3xl {
+    color: var(--accent) !important;
+}
+
+/* Bar chart bars \u2014 more visible in light mode */
+[data-theme="light"] [class*="bg-space-900/"] [class*="bg-accent-purple/"] {
+    background-color: rgba(109, 94, 243, 0.45) !important;
+    border-color: var(--accent) !important;
+}
+
+/* Mono label inside chart area */
+[data-theme="light"] [class*="bg-space-900/"] .font-mono,
+[data-theme="light"] [class*="bg-space-900/"] .absolute.top-4 {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* h4 headings inside Celestial Events glass cards stay visible in light mode */
+[data-theme="light"] .glass h4.text-white,
+[data-theme="light"] .glass h4[class*="text-white"] {
+    color: var(--text-main) !important;
+}
+
+/* Ensure .dark-card text (image overlays, etc.) stays white in light mode */
+[data-theme="light"] .dark-card h3 {
+    color: #ffffff !important;
+}
+[data-theme="light"] .dark-card p {
+    color: rgba(255, 255, 255, 0.75) !important;
+}
+[data-theme="light"] .dark-card span:not(.bg-accent-purple) {
+    color: rgba(255, 255, 255, 0.90) !important;
+}
+
+/* Hero section text stays light in light mode against dark overlay */
+[data-theme="light"] .hero-title,
+[data-theme="light"] h1.hero-title {
+    color: #ffffff !important;
+}
+[data-theme="light"] .hero-text,
+[data-theme="light"] p.hero-text {
+    color: #f1f5f9 !important;
+}
+
+/* Override white opacity layers to dark opacity layers in light mode to keep them visible */
+[data-theme="light"] .bg-white\/5 {
+    background-color: rgba(15, 23, 42, 0.05) !important;
+}
+[data-theme="light"] .bg-white\/10 {
+    background-color: rgba(15, 23, 42, 0.08) !important;
+}
+[data-theme="light"] .border-white\/5 {
+    border-color: rgba(15, 23, 42, 0.08) !important;
+}
+[data-theme="light"] .border-white\/10 {
+    border-color: rgba(15, 23, 42, 0.12) !important;
+}
+
 
 
