@@ -45,170 +45,175 @@
         </div>
     </section>
 
-    <!-- Featured Astronomy Articles Grid -->
-    <section class="py-24">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Post 1 -->
-                <article class="glass rounded-[2rem] overflow-hidden group fade-up flex flex-col h-full">
-                    <div class="h-56 overflow-hidden">
-                        <img src="assets/images/blog_post_1.png" alt="James Webb Telescope" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <div class="p-8 flex flex-col flex-grow">
-                        <div class="flex items-center gap-4 text-xs font-bold text-accent-purple uppercase tracking-widest mb-4">
-                            <span>Science</span>
-                            <span class="w-1 h-1 bg-slate-500 rounded-full"></span>
-                            <span>May 12, 2024</span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 group-hover:text-accent-purple transition-colors">The James Webb Legacy: New Frontiers</h3>
-                        <p class="text-slate-400 text-sm mb-6">How the latest data from JWST is changing our understanding of the early universe...</p>
-                        <div class="mt-auto">
-                            <a href="#" class="font-bold flex items-center gap-2 text-sm uppercase tracking-wider group-hover:gap-4 transition-all">Read Article <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </article>
-                <!-- Post 2 -->
-                <article class="glass rounded-[2rem] overflow-hidden group fade-up flex flex-col h-full" style="animation-delay: 0.1s;">
-                    <div class="h-56 overflow-hidden">
-                        <img src="assets/images/blog_post_2.png" alt="Mars Colonization" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <div class="p-8 flex flex-col flex-grow">
-                        <div class="flex items-center gap-4 text-xs font-bold text-accent-purple uppercase tracking-widest mb-4">
-                            <span>Exploration</span>
-                            <span class="w-1 h-1 bg-slate-500 rounded-full"></span>
-                            <span>May 08, 2024</span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 group-hover:text-accent-purple transition-colors">Colonizing Mars: The Reality Check</h3>
-                        <p class="text-slate-400 text-sm mb-6">The technical and biological hurdles we must overcome to stay on the red planet...</p>
-                        <div class="mt-auto">
-                            <a href="#" class="font-bold flex items-center gap-2 text-sm uppercase tracking-wider group-hover:gap-4 transition-all">Read Article <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </article>
-                <!-- Post 3 -->
-                <article class="glass rounded-[2rem] overflow-hidden group fade-up md:col-span-2 lg:col-span-1 md:max-w-md md:mx-auto lg:max-w-none lg:mx-0 flex flex-col h-full" style="animation-delay: 0.2s;">
-                    <div class="h-56 overflow-hidden">
-                        <img src="assets/images/blog_post_3.png" alt="STEM Outreach" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <div class="p-8 flex flex-col flex-grow">
-                        <div class="flex items-center gap-4 text-xs font-bold text-accent-purple uppercase tracking-widest mb-4">
-                            <span>Education</span>
-                            <span class="w-1 h-1 bg-slate-500 rounded-full"></span>
-                            <span>May 05, 2024</span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 group-hover:text-accent-purple transition-colors">STEM Outreach in Rural Schools</h3>
-                        <p class="text-slate-400 text-sm mb-6">A report on our recent mission to bring astronomy to remote community classrooms...</p>
-                        <div class="mt-auto">
-                            <a href="#" class="font-bold flex items-center gap-2 text-sm uppercase tracking-wider group-hover:gap-4 transition-all">Read Article <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <div class="text-center mt-16 fade-up">
-                <button class="btn-premium btn-glass">Load More Articles</button>
-            </div>
-        </div>
-    </section>
+    <!-- Stars Background in Main Body -->
+    <div class="relative overflow-hidden">
+        <div class="stars-container"><div class="stars"></div><div class="twinkling"></div></div>
 
-    <!-- Space Observation Tips Section -->
-    <section class="py-24 section-bg">
-        <div class="max-w-7xl mx-auto px-4">
-             <div class="flex flex-col lg:flex-row items-center gap-16">
-                 <div class="lg:w-3/5 fade-up text-center lg:text-left">
-                     <h2 class="text-4xl font-bold mb-6">Observer's <span class="text-accent-purple">Guide</span></h2>
-                     <p class="text-slate-300 text-lg mb-10 mx-auto lg:mx-0 max-w-xl">Master the art of stargazing with our monthly expert tips.</p>
-                     <div class="space-y-6 text-left">
-                          <!-- Tip 1 -->
-                          <div class="glass p-6 rounded-2xl flex flex-col sm:flex-row items-center gap-6 lg:gap-8 hover:border-accent-purple transition-all duration-300">
-                              <div class="text-4xl text-accent-purple font-extrabold opacity-50">01</div>
-                              <div class="flex-1 text-center sm:text-left">
-                                  <h5 class="text-xl font-bold mb-1">Avoid Light Pollution</h5>
-                                  <p class="text-slate-400 text-sm">Drive at least 30 miles away from city centers for clear views.</p>
+        <!-- Featured Astronomy Articles Grid -->
+        <section class="py-24 relative z-10">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Post 1 -->
+                    <article class="glass rounded-[2rem] overflow-hidden group fade-up flex flex-col h-full">
+                        <div class="h-56 overflow-hidden">
+                            <img src="assets/images/blog_post_1.png" alt="James Webb Telescope" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow">
+                            <div class="flex items-center gap-4 text-xs font-bold text-accent-purple uppercase tracking-widest mb-4">
+                                <span>Science</span>
+                                <span class="w-1 h-1 bg-slate-500 rounded-full"></span>
+                                <span>May 12, 2024</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 group-hover:text-accent-purple transition-colors">The James Webb Legacy: New Frontiers</h3>
+                            <p class="text-slate-400 text-sm mb-6">How the latest data from JWST is changing our understanding of the early universe...</p>
+                            <div class="mt-auto">
+                                <a href="#" class="font-bold flex items-center gap-2 text-sm uppercase tracking-wider group-hover:gap-4 transition-all">Read Article <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Post 2 -->
+                    <article class="glass rounded-[2rem] overflow-hidden group fade-up flex flex-col h-full" style="animation-delay: 0.1s;">
+                        <div class="h-56 overflow-hidden">
+                            <img src="assets/images/blog_post_2.png" alt="Mars Colonization" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow">
+                            <div class="flex items-center gap-4 text-xs font-bold text-accent-purple uppercase tracking-widest mb-4">
+                                <span>Exploration</span>
+                                <span class="w-1 h-1 bg-slate-500 rounded-full"></span>
+                                <span>May 08, 2024</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 group-hover:text-accent-purple transition-colors">Colonizing Mars: The Reality Check</h3>
+                            <p class="text-slate-400 text-sm mb-6">The technical and biological hurdles we must overcome to stay on the red planet...</p>
+                            <div class="mt-auto">
+                                <a href="#" class="font-bold flex items-center gap-2 text-sm uppercase tracking-wider group-hover:gap-4 transition-all">Read Article <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Post 3 -->
+                    <article class="glass rounded-[2rem] overflow-hidden group fade-up md:col-span-2 lg:col-span-1 md:max-w-md md:mx-auto lg:max-w-none lg:mx-0 flex flex-col h-full" style="animation-delay: 0.2s;">
+                        <div class="h-56 overflow-hidden">
+                            <img src="assets/images/blog_post_3.png" alt="STEM Outreach" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow">
+                            <div class="flex items-center gap-4 text-xs font-bold text-accent-purple uppercase tracking-widest mb-4">
+                                <span>Education</span>
+                                <span class="w-1 h-1 bg-slate-500 rounded-full"></span>
+                                <span>May 05, 2024</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 group-hover:text-accent-purple transition-colors">STEM Outreach in Rural Schools</h3>
+                            <p class="text-slate-400 text-sm mb-6">A report on our recent mission to bring astronomy to remote community classrooms...</p>
+                            <div class="mt-auto">
+                                <a href="#" class="font-bold flex items-center gap-2 text-sm uppercase tracking-wider group-hover:gap-4 transition-all">Read Article <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="text-center mt-16 fade-up">
+                    <button class="btn-premium btn-glass">Load More Articles</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Space Observation Tips Section -->
+        <section class="py-24 section-bg relative z-10">
+            <div class="max-w-7xl mx-auto px-4">
+                 <div class="flex flex-col lg:flex-row items-center gap-16">
+                     <div class="lg:w-3/5 fade-up text-center lg:text-left">
+                         <h2 class="text-4xl font-bold mb-6">Observer's <span class="text-accent-purple">Guide</span></h2>
+                         <p class="text-slate-300 text-lg mb-10 mx-auto lg:mx-0 max-w-xl">Master the art of stargazing with our monthly expert tips.</p>
+                         <div class="space-y-6 text-left">
+                              <!-- Tip 1 -->
+                              <div class="glass p-6 rounded-2xl flex flex-col sm:flex-row items-center gap-6 lg:gap-8 hover:border-accent-purple transition-all duration-300">
+                                  <div class="text-4xl text-accent-purple font-extrabold opacity-50">01</div>
+                                  <div class="flex-1 text-center sm:text-left">
+                                      <h5 class="text-xl font-bold mb-1">Avoid Light Pollution</h5>
+                                      <p class="text-slate-400 text-sm">Drive at least 30 miles away from city centers for clear views.</p>
+                                  </div>
                               </div>
-                          </div>
-                          <!-- Tip 2 -->
-                          <div class="glass p-6 rounded-2xl flex flex-col sm:flex-row items-center gap-6 lg:gap-8 hover:border-accent-purple transition-all duration-300">
-                              <div class="text-4xl text-accent-purple font-extrabold opacity-50">02</div>
-                              <div class="flex-1 text-center sm:text-left">
-                                  <h5 class="text-xl font-bold mb-1">Use Red Light Only</h5>
-                                  <p class="text-slate-400 text-sm">Preserve your night vision by using red filters on flashlights.</p>
+                              <!-- Tip 2 -->
+                              <div class="glass p-6 rounded-2xl flex flex-col sm:flex-row items-center gap-6 lg:gap-8 hover:border-accent-purple transition-all duration-300">
+                                  <div class="text-4xl text-accent-purple font-extrabold opacity-50">02</div>
+                                  <div class="flex-1 text-center sm:text-left">
+                                      <h5 class="text-xl font-bold mb-1">Use Red Light Only</h5>
+                                      <p class="text-slate-400 text-sm">Preserve your night vision by using red filters on flashlights.</p>
+                                  </div>
                               </div>
-                          </div>
-                          <!-- Tip 3 -->
-                          <div class="glass p-6 rounded-2xl flex flex-col sm:flex-row items-center gap-6 lg:gap-8 hover:border-accent-purple transition-all duration-300">
-                              <div class="text-4xl text-accent-purple font-extrabold opacity-50">03</div>
-                              <div class="flex-1 text-center sm:text-left">
-                                  <h5 class="text-xl font-bold mb-1">Dress for 10° Cooler</h5>
-                                  <p class="text-slate-400 text-sm">Standing still at night feels much colder than the forecast suggests.</p>
+                              <!-- Tip 3 -->
+                              <div class="glass p-6 rounded-2xl flex flex-col sm:flex-row items-center gap-6 lg:gap-8 hover:border-accent-purple transition-all duration-300">
+                                  <div class="text-4xl text-accent-purple font-extrabold opacity-50">03</div>
+                                  <div class="flex-1 text-center sm:text-left">
+                                      <h5 class="text-xl font-bold mb-1">Dress for 10° Cooler</h5>
+                                      <p class="text-slate-400 text-sm">Standing still at night feels much colder than the forecast suggests.</p>
+                                  </div>
                               </div>
-                          </div>
+                         </div>
+                     </div>
+                     <div class="lg:w-2/5 fade-up flex justify-center w-full">
+                         <img src="assets/images/stargazing_guide.png" alt="Stargazing Tips" class="rounded-[3rem] border border-white/10 shadow-2xl w-full max-w-sm h-64 md:h-80 lg:h-auto object-cover">
                      </div>
                  </div>
-                 <div class="lg:w-2/5 fade-up flex justify-center w-full">
-                     <img src="assets/images/stargazing_guide.png" alt="Stargazing Tips" class="rounded-[3rem] border border-white/10 shadow-2xl w-full max-w-sm h-64 md:h-80 lg:h-auto object-cover">
-                 </div>
-             </div>
-        </div>
-    </section>
+            </div>
+        </section>
 
-    <!-- Astronomy Education Insights Section -->
-    <section class="py-24">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold mb-16 fade-up">Educational <span class="text-accent-purple">Insights</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="glass p-12 rounded-[3rem] text-left fade-up flex flex-col h-full">
-                    <i class="fas fa-quote-left text-4xl text-accent-purple mb-8 opacity-20"></i>
-                    <h4 class="text-2xl font-bold mb-6">The Power of Visual Learning</h4>
-                    <p class="text-slate-400 leading-relaxed mb-8 flex-grow">Studies show that immersive 360-degree environments can increase memory retention in students by up to 40% compared to traditional 2D textbooks.</p>
-                    <div class="mt-auto">
-                        <div class="flex items-center gap-4">
-                            <img src="assets/images/dr_julian.png" alt="Dr. Julian Cosmos" class="w-12 h-12 rounded-full border-2 border-accent-purple shadow-lg object-cover">
-                            <div>
-                                <p class="font-bold">Dr. Julian Cosmos</p>
-                                <p class="text-xs text-slate-500">Lead Researcher</p>
+        <!-- Astronomy Education Insights Section -->
+        <section class="py-24 relative z-10">
+            <div class="max-w-7xl mx-auto px-4 text-center">
+                <h2 class="text-4xl font-bold mb-16 fade-up">Educational <span class="text-accent-purple">Insights</span></h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="glass p-12 rounded-[3rem] text-left fade-up flex flex-col h-full">
+                        <i class="fas fa-quote-left text-4xl text-accent-purple mb-8 opacity-20"></i>
+                        <h4 class="text-2xl font-bold mb-6">The Power of Visual Learning</h4>
+                        <p class="text-slate-400 leading-relaxed mb-8 flex-grow">Studies show that immersive 360-degree environments can increase memory retention in students by up to 40% compared to traditional 2D textbooks.</p>
+                        <div class="mt-auto">
+                            <div class="flex items-center gap-4">
+                                <img src="assets/images/dr_julian.png" alt="Dr. Julian Cosmos" class="w-12 h-12 rounded-full border-2 border-accent-purple shadow-lg object-cover">
+                                <div>
+                                    <p class="font-bold">Dr. Julian Cosmos</p>
+                                    <p class="text-xs text-slate-500">Lead Researcher</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="glass p-12 rounded-[3rem] text-left fade-up flex flex-col h-full" style="animation-delay: 0.1s;">
-                    <i class="fas fa-quote-left text-4xl text-accent-purple mb-8 opacity-20"></i>
-                    <h4 class="text-2xl font-bold mb-6">Inspiring the Next Engineers</h4>
-                    <p class="text-slate-400 leading-relaxed mb-8 flex-grow">By bringing high-end astronomical equipment into schools, we demystify science and make technical careers feel achievable for everyone.</p>
-                    <div class="mt-auto">
-                        <div class="flex items-center gap-4">
-                            <img src="assets/images/elena_rodriguez.png" alt="Elena Rodriguez" class="w-12 h-12 rounded-full border-2 border-accent-purple shadow-lg object-cover">
-                            <div>
-                                <p class="font-bold">Elena Rodriguez</p>
-                                <p class="text-xs text-slate-500">Outreach Specialist</p>
+                    <div class="glass p-12 rounded-[3rem] text-left fade-up flex flex-col h-full" style="animation-delay: 0.1s;">
+                        <i class="fas fa-quote-left text-4xl text-accent-purple mb-8 opacity-20"></i>
+                        <h4 class="text-2xl font-bold mb-6">Inspiring the Next Engineers</h4>
+                        <p class="text-slate-400 leading-relaxed mb-8 flex-grow">By bringing high-end astronomical equipment into schools, we demystify science and make technical careers feel achievable for everyone.</p>
+                        <div class="mt-auto">
+                            <div class="flex items-center gap-4">
+                                <img src="assets/images/elena_rodriguez.png" alt="Elena Rodriguez" class="w-12 h-12 rounded-full border-2 border-accent-purple shadow-lg object-cover">
+                                <div>
+                                    <p class="font-bold">Elena Rodriguez</p>
+                                    <p class="text-xs text-slate-500">Outreach Specialist</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA Section -->
-    <section class="py-24">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="relative rounded-[3rem] overflow-hidden group fade-up">
-                <div class="absolute inset-0 z-0">
-                    <img src="assets/images/blog_cta.png" alt="CTA Background" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
-                    <div class="absolute inset-0 bg-gradient-to-r from-space-900 to-space-900/40"></div>
-                </div>
-                <div class="relative z-10 p-12 lg:p-20 flex flex-col items-center text-center gap-10">
-                    <div class="max-w-3xl">
-                        <h2 class="text-4xl lg:text-5xl font-extrabold mb-6 text-white !important">Ready to Start Your <span class="text-accent-purple">Cosmic Adventure?</span></h2>
-                        <p class="text-white/80 text-lg mb-8">Join us for an immersive journey through the stars. Perfect for schools, communities, and private events.</p>
+        <!-- CTA Section -->
+        <section class="py-24 relative z-10">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="relative rounded-[3rem] overflow-hidden group fade-up">
+                    <div class="absolute inset-0 z-0">
+                        <img src="assets/images/blog_cta.png" alt="CTA Background" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+                        <div class="absolute inset-0 bg-gradient-to-r from-space-900 to-space-900/40"></div>
                     </div>
-                    <div class="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
-                        <a href="contact.html" class="btn-premium btn-primary px-10 py-5 rounded-2xl font-bold text-lg whitespace-nowrap">Book a Show Now</a>
-                        <a href="programs.html" class="btn-premium btn-glass px-10 py-5 rounded-2xl font-bold text-lg whitespace-nowrap">View Programs</a>
+                    <div class="relative z-10 p-12 lg:p-20 flex flex-col items-center text-center gap-10">
+                        <div class="max-w-3xl">
+                            <h2 class="text-4xl lg:text-5xl font-extrabold mb-6 text-white !important">Ready to Start Your <span class="text-accent-purple">Cosmic Adventure?</span></h2>
+                            <p class="text-white/80 text-lg mb-8">Join us for an immersive journey through the stars. Perfect for schools, communities, and private events.</p>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
+                            <a href="contact.html" class="btn-premium btn-primary px-10 py-5 rounded-2xl font-bold text-lg whitespace-nowrap">Book a Show Now</a>
+                            <a href="programs.html" class="btn-premium btn-glass px-10 py-5 rounded-2xl font-bold text-lg whitespace-nowrap">View Programs</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- Footer (Identical) -->
     <footer class="footer-bg pt-24 pb-12 border-t border-white/10"><div class="max-w-7xl mx-auto px-4"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-12 mb-16"><div><div class="brand-container justify-start mb-6"><i class="fas fa-meteor brand-icon"></i><span class="brand-name">STELLAR</span></div><p class="text-slate-400 mb-6">Bringing the wonders of space to your doorstep. Immersive astronomy outreach for everyone.</p><div class="flex space-x-4"><a href="#" class="btn-premium btn-glass"><i class="fab fa-facebook-f"></i></a><a href="#" class="btn-premium btn-glass"><i class="fab fa-instagram"></i></a><a href="#" class="btn-premium btn-glass"><i class="fab fa-youtube"></i></a></div></div><div><h4 class="text-lg font-bold mb-6">Quick Links</h4><ul class="space-y-3 text-slate-400"><li><a href="about.html" class="hover:text-accent-purple">About Us</a></li><li><a href="dome-shows.html" class="hover:text-accent-purple">Dome Shows</a></li><li><a href="pricing.html" class="hover:text-accent-purple">Pricing</a></li><li><a href="blog.html" class="hover:text-accent-purple">Latest News</a></li><li><a href="contact.html" class="hover:text-accent-purple">Contact</a></li></ul></div><div><h4 class="text-lg font-bold mb-6">Programs</h4><ul class="space-y-3 text-slate-400"><li><a href="#" class="hover:text-accent-purple">School Assemblies</a></li><li><a href="#" class="hover:text-accent-purple">STEM Workshops</a></li><li><a href="#" class="hover:text-accent-purple">Birthday Packages</a></li><li><a href="#" class="hover:text-accent-purple">Community Events</a></li><li><a href="#" class="hover:text-accent-purple">Telescope Nights</a></li></ul></div><div><h4 class="text-lg font-bold mb-6">Newsletter</h4><p class="mb-4">Stay updated with celestial events and new shows.</p><form class="flex"><input type="email" placeholder="Email Address" class="flex-1 glass px-4 py-2 rounded-l-lg border-r-0 focus:outline-none focus:border-accent-purple"><button class="bg-accent-purple text-space-900 px-6 py-2 rounded-r-lg font-bold hover:bg-white hover:text-accent-purple transition-all duration-300">Join</button></form></div></div><div class="pt-12 border-t border-white/10 text-center text-slate-500 text-sm"><p>&copy; 2026 Stellar Outreach. All rights reserved.</p></div></div></footer>

@@ -622,3 +622,199 @@ body.light #mobile-menu {
     border-top-color: rgba(0,0,0,0.1) !important;
 }
 
+/* ==========================================
+   Antigravity Premium Redesign System
+   ========================================== */
+
+/* Twinkling Stars Background */
+.stars-container {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+.stars, .twinkling {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.stars {
+    background: transparent url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300"><circle cx="15" cy="20" r="1.2" fill="white" opacity="0.6"/><circle cx="120" cy="80" r="1.6" fill="white" opacity="0.8"/><circle cx="210" cy="40" r="1.1" fill="white" opacity="0.5"/><circle cx="50" cy="180" r="1.3" fill="white" opacity="0.7"/><circle cx="180" cy="220" r="1" fill="white" opacity="0.4"/><circle cx="270" cy="140" r="1.9" fill="white" opacity="0.9"/><circle cx="80" cy="280" r="1.2" fill="white" opacity="0.6"/><circle cx="240" cy="270" r="1.4" fill="white" opacity="0.7"/></svg>') repeat;
+    opacity: 0.45;
+    z-index: 0;
+}
+.twinkling {
+    background: transparent url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400"><circle cx="80" cy="120" r="2.2" fill="white" opacity="0.7"/><circle cx="280" cy="60" r="1.2" fill="white" opacity="0.5"/><circle cx="340" cy="240" r="2.8" fill="white" opacity="0.8"/><circle cx="110" cy="310" r="1.7" fill="white" opacity="0.6"/><circle cx="200" cy="190" r="1.2" fill="white" opacity="0.4"/></svg>') repeat;
+    z-index: 1;
+    animation: move-twink-back 180s linear infinite;
+}
+@keyframes move-twink-back {
+    from { background-position: 0 0; }
+    to { background-position: -10000px 5000px; }
+}
+
+[data-theme="light"] .stars {
+    opacity: 0.08;
+    filter: invert(1);
+}
+[data-theme="light"] .twinkling {
+    opacity: 0.05;
+    filter: invert(1);
+}
+
+/* Cosmic Neon & Glows */
+.cosmic-glow-purple {
+    box-shadow: 0 0 25px rgba(109, 94, 243, 0.2);
+}
+.cosmic-glow-blue {
+    box-shadow: 0 0 25px rgba(129, 140, 248, 0.25);
+}
+.neon-border {
+    border: 1px solid rgba(109, 94, 243, 0.25);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.neon-border:hover {
+    border-color: rgba(109, 94, 243, 0.7);
+    box-shadow: 0 0 20px rgba(109, 94, 243, 0.3);
+}
+
+/* Bento Grid System */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+}
+.bento-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 2rem;
+    padding: 2rem;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    height: 100%;
+}
+.bento-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent);
+    box-shadow: 0 15px 35px -10px rgba(109, 94, 243, 0.15);
+}
+
+/* Stargazing Guide Widget Specifics */
+.moon-phase-indicator {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    background: #1e293b;
+    box-shadow: inset -10px -10px 20px rgba(0,0,0,0.6), 0 0 20px rgba(255,255,255,0.1);
+}
+.moon-phase-indicator::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #e2e8f0;
+    box-shadow: 0 0 10px rgba(255,255,255,0.8);
+    transform: translateX(35%);
+    transition: transform 0.5s ease;
+}
+
+/* Light theme support */
+[data-theme="light"] .moon-phase-indicator {
+    background: #e2e8f0;
+    box-shadow: inset 10px 10px 20px rgba(0,0,0,0.1), 0 0 10px rgba(109, 94, 243, 0.1);
+}
+[data-theme="light"] .moon-phase-indicator::after {
+    background: #6d5ef3;
+}
+
+/* Telemetry Stats Glow Rings */
+.stat-ring {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(var(--accent) var(--percentage, 0%), rgba(255,255,255,0.05) var(--percentage, 0%));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    transition: --percentage 1s ease-in-out;
+}
+[data-theme="light"] .stat-ring {
+    background: conic-gradient(var(--accent) var(--percentage, 0%), rgba(0,0,0,0.05) var(--percentage, 0%));
+}
+.stat-ring::after {
+    content: '';
+    position: absolute;
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    background: var(--secondary);
+}
+.stat-ring-content {
+    position: relative;
+    z-index: 10;
+    font-weight: 700;
+}
+
+/* Telescope Eyepiece Simulator */
+.telescope-lens {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 8px solid #0f172a;
+    box-shadow: 0 0 0 4px var(--glass-border), 0 20px 40px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+.telescope-lens::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.8);
+    z-index: 5;
+    pointer-events: none;
+}
+.telescope-crosshair {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    z-index: 4;
+    pointer-events: none;
+}
+.telescope-crosshair::before,
+.telescope-crosshair::after {
+    content: '';
+    position: absolute;
+    background: rgba(255, 255, 255, 0.15);
+}
+.telescope-crosshair::before {
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+}
+.telescope-crosshair::after {
+    left: 50%;
+    top: 10%;
+    bottom: 10%;
+    width: 1px;
+}
+
+

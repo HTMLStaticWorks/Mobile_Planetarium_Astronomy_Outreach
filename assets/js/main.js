@@ -148,4 +148,175 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // ==========================================
+    // Redesign Interactions
+    // ==========================================
+
+    // Telescope Simulator Logic
+    const simulatorTabs = document.querySelectorAll('.telescope-sim-tab');
+    const lensImg = document.getElementById('telescope-lens-img');
+    const simTitle = document.getElementById('telescope-sim-title');
+    const simDesc = document.getElementById('telescope-sim-desc');
+    const simCoords = document.getElementById('telescope-sim-coords');
+
+    const simulatedObjects = {
+        moon: {
+            title: "The Moon (Lunar Craters)",
+            desc: "Observe the deep impact craters Tycho and Copernicus along the terminator line. The moon's textured surface is illuminated by sharp sunlight angles.",
+            coords: "RA 12h 45m / DEC -04° 12'",
+            img: "assets/images/stargazing_guide.png"
+        },
+        saturn: {
+            title: "Saturn (The Ringed Giant)",
+            desc: "Gaze at Saturn's spectacular ring system, separated by the dark Cassini Division. In clear conditions, you can spot its largest moon, Titan.",
+            coords: "RA 18h 22m / DEC -22° 30'",
+            img: "https://images.unsplash.com/photo-1614313913007-2b4ae8ce32d6?auto=format&fit=crop&q=80&w=600"
+        },
+        orion: {
+            title: "The Great Orion Nebula (M42)",
+            desc: "A stellar nursery located 1,344 light-years away in the constellation Orion. Wisps of hydrogen gas are lit up by a central cluster of newborn stars.",
+            coords: "RA 05h 35m / DEC -05° 23'",
+            img: "assets/images/hero_space.png"
+        }
+    };
+
+    if (simulatorTabs.length > 0 && lensImg) {
+        simulatorTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                simulatorTabs.forEach(t => {
+                    t.classList.remove('active', 'bg-accent-purple', 'text-white');
+                    t.classList.add('glass', 'text-slate-300');
+                });
+                tab.classList.add('active', 'bg-accent-purple', 'text-white');
+                tab.classList.remove('glass', 'text-slate-300');
+
+                const objKey = tab.getAttribute('data-object');
+                const data = simulatedObjects[objKey];
+                if (data) {
+                    lensImg.style.opacity = '0';
+                    setTimeout(() => {
+                        lensImg.src = data.img;
+                        lensImg.style.opacity = '1';
+                    }, 200);
+
+                    simTitle.innerText = data.title;
+                    simDesc.innerText = data.desc;
+                    simCoords.innerText = data.coords;
+                }
+            });
+        });
+    }
+
+    // Catalog Filter Logic
+    const filterButtons = document.querySelectorAll('.catalog-filter-btn');
+    const showCards = document.querySelectorAll('.catalog-show-card');
+
+    if (filterButtons.length > 0 && showCards.length > 0) {
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => {
+                    b.classList.remove('active', 'bg-accent-purple', 'text-white');
+                    b.classList.add('glass', 'text-slate-300');
+                });
+                btn.classList.add('active', 'bg-accent-purple', 'text-white');
+                btn.classList.remove('glass', 'text-slate-300');
+
+                const category = btn.getAttribute('data-filter');
+                showCards.forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'scale(1)';
+                        }, 50);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'scale(0.95)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+    }
+
+    // Stargazing Tonight Widget Logic
+    const moonPhaseElem = document.getElementById('moon-phase-name');
+    const moonShadow = document.getElementById('moon-shadow');
+    if (moonPhaseElem && moonShadow) {
+        const date = new Date();
+        const lp = 2551443;
+        const new_moon = new Date(1970, 0, 7, 20, 35, 0);
+        const phase = ((date.getTime() - new_moon.getTime()) / 1000) % lp;
+        const age = phase / (24 * 3600);
+        
+        let phaseName = "";
+        
+        if (age < 1.84566) { phaseName = "New Moon"; }
+        else if (age < 5.53699) { phaseName = "Waxing Crescent"; }
+        else if (age < 9.22831) { phaseName = "First Quarter"; }
+        else if (age < 12.91964) { phaseName = "Waxing Gibbous"; }
+        else if (age < 16.61096) { phaseName = "Full Moon"; }
+        else if (age < 20.30228) { phaseName = "Waning Gibbous"; }
+        else if (age < 23.99361) { phaseName = "Third Quarter"; }
+        else if (age < 27.68493) { phaseName = "Waning Crescent"; }
+        else { phaseName = "New Moon"; }
+        
+        moonPhaseElem.innerText = phaseName;
+        
+        // Style shadow width and position based on phase age
+        moonShadow.style.left = '0';
+        if (phaseName === "Full Moon") {
+            moonShadow.style.width = '0%';
+        } else if (phaseName === "New Moon") {
+            moonShadow.style.width = '100%';
+            moonShadow.style.left = '0';
+        } else if (phaseName.includes("Crescent")) {
+            moonShadow.style.width = '70%';
+            moonShadow.style.left = phaseName.includes("Waxing") ? '30%' : '-30%';
+        } else if (phaseName.includes("Quarter")) {
+            moonShadow.style.width = '50%';
+            moonShadow.style.left = phaseName.includes("First") ? '50%' : '-50%';
+        } else if (phaseName.includes("Gibbous")) {
+            moonShadow.style.width = '20%';
+            moonShadow.style.left = phaseName.includes("Waxing") ? '80%' : '-80%';
+        }
+    }
+
+    // Stat Ring Animation on Scroll
+    const statRings = document.querySelectorAll('.stat-ring');
+    if (statRings.length > 0) {
+        const ringObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const targetPercent = entry.target.getAttribute('data-percent');
+                    entry.target.style.setProperty('--percentage', `${targetPercent}%`);
+                    
+                    const drawConic = (percent) => {
+                        const activeColor = getComputedStyle(document.body).getPropertyValue('--accent').trim() || '#6d5ef3';
+                        const isLight = document.body.classList.contains('light');
+                        const trackColor = isLight ? 'rgba(0,0,0,0.05)' : 'rgba(255,255,255,0.05)';
+                        entry.target.style.backgroundImage = `conic-gradient(${activeColor} ${percent}%, ${trackColor} ${percent}%)`;
+                    };
+                    
+                    let currentPercent = 0;
+                    const animInterval = setInterval(() => {
+                        if (currentPercent < targetPercent) {
+                            currentPercent += 2;
+                            if (currentPercent > targetPercent) currentPercent = targetPercent;
+                            drawConic(currentPercent);
+                        } else {
+                            clearInterval(animInterval);
+                        }
+                    }, 15);
+                    
+                    ringObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        statRings.forEach(ring => ringObserver.observe(ring));
+    }
 });
