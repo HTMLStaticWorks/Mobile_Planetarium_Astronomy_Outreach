@@ -564,8 +564,8 @@ body.light .btn-premium:not(.btn-primary):hover i {
     color: var(--text-main) !important;
 }
 
-/* Paragraphs — make dark in light mode, but NOT if they carry their own accent/color class */
-[data-theme="light"] p:not(.text-accent-purple):not(.text-emerald-400):not(.text-pink-500) {
+/* Paragraphs — make dark in light mode, but NOT if they carry their own accent/color class or are hero description text */
+[data-theme="light"] p:not(.text-accent-purple):not(.text-emerald-400):not(.text-pink-500):not(.hero-text) {
     color: var(--text-muted) !important;
 }
 
