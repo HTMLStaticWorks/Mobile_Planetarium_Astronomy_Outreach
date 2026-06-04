@@ -666,6 +666,33 @@ body.light .btn-premium:not(.btn-primary):hover i {
     color: #ffffff !important;
 }
 
+/* ── Light mode: catalog/dark-overlay cards MUST stay white ──
+   These override the broad light-mode text-white/text-slate rules */
+[data-theme="light"] .dark-card,
+[data-theme="light"] .dark-card h1,
+[data-theme="light"] .dark-card h2,
+[data-theme="light"] .dark-card h3,
+[data-theme="light"] .dark-card h4,
+[data-theme="light"] .dark-card h5,
+[data-theme="light"] .dark-card p,
+[data-theme="light"] .dark-card span {
+    color: #ffffff !important;
+}
+[data-theme="light"] .dark-card .text-slate-300,
+[data-theme="light"] .dark-card .text-slate-400 {
+    color: rgba(255, 255, 255, 0.75) !important;
+}
+
+[data-theme="light"] .catalog-show-card h3,
+[data-theme="light"] .catalog-show-card p,
+[data-theme="light"] .catalog-show-card span {
+    color: #ffffff !important;
+}
+[data-theme="light"] .catalog-show-card .text-slate-300,
+[data-theme="light"] .catalog-show-card .text-slate-400 {
+    color: rgba(255, 255, 255, 0.75) !important;
+}
+
 /* Accordion Styles */
 summary {
     list-style: none;
@@ -1024,12 +1051,30 @@ body.light #mobile-menu {
 /* Side cards: compact horizontal layout */
 .programs-side-card {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Inner flex row inside each side card */
+.programs-side-card .flex {
+    flex: 1;
+    align-items: stretch;
 }
 
 .programs-side-img {
     width: 110px;
-    height: 90px;
     flex-shrink: 0;
+    /* Stretch to fill the card row height — makes all 3 images the same height */
+    align-self: stretch;
+    min-height: 90px;
+}
+
+/* Ensure image fills the container fully */
+.programs-side-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 /* 1024px – stack one by one (single column) */
@@ -1056,7 +1101,9 @@ body.light #mobile-menu {
 
     .programs-side-img {
         width: 110px;
-        height: 90px;
+        /* Let height stretch to match card content — all 3 images equal height */
+        align-self: stretch;
+        min-height: 90px;
     }
 }
 
@@ -1089,7 +1136,8 @@ body.light #mobile-menu {
 
     .programs-side-img {
         width: 100px;
-        height: 80px;
+        align-self: stretch;
+        min-height: 80px;
     }
 }
 
@@ -1116,7 +1164,8 @@ body.light #mobile-menu {
 
     .programs-side-img {
         width: 100%;
-        height: 160px;
+        height: 190px;
+        align-self: auto;
     }
 }
 
@@ -1277,6 +1326,13 @@ body.light #mobile-menu {
 [data-theme="light"] .bg-white\/10 {
     background-color: rgba(15, 23, 42, 0.08) !important;
 }
+/* Override white opacity layers to dark opacity layers in light mode to keep them visible */
+[data-theme="light"] .bg-white\/5 {
+    background-color: rgba(15, 23, 42, 0.05) !important;
+}
+[data-theme="light"] .bg-white\/10 {
+    background-color: rgba(15, 23, 42, 0.08) !important;
+}
 [data-theme="light"] .border-white\/5 {
     border-color: rgba(15, 23, 42, 0.08) !important;
 }
@@ -1284,5 +1340,235 @@ body.light #mobile-menu {
     border-color: rgba(15, 23, 42, 0.12) !important;
 }
 
+/* ============================================================
+   HOME 2 — OUTREACH IMPACT DASHBOARD — LIGHT MODE BACKGROUNDS
+   ============================================================ */
 
+/* Outer glass container of the dashboard */
+[data-theme="light"] .max-w-5xl.glass {
+    background: linear-gradient(135deg, #f0edff 0%, #e8e4ff 100%) !important;
+    border-color: rgba(109, 94, 243, 0.25) !important;
+    box-shadow: 0 20px 60px rgba(109, 94, 243, 0.12) !important;
+}
+
+/* Stat mini-cards (Engagement Growth, Teacher Satisfaction, Regions Covered) */
+[data-theme="light"] .bg-space-900\/50 {
+    background: linear-gradient(135deg, #ffffff 0%, #f5f3ff 100%) !important;
+    border-color: rgba(109, 94, 243, 0.2) !important;
+    box-shadow: 0 4px 15px rgba(109, 94, 243, 0.08) !important;
+}
+
+/* Stat mini-card labels */
+[data-theme="light"] .bg-space-900\/50 .text-slate-500 {
+    color: #64748b !important;
+}
+
+/* Stat mini-card numbers stay accent purple */
+[data-theme="light"] .bg-space-900\/50 .text-accent-purple,
+[data-theme="light"] .bg-space-900\/50 p {
+    color: var(--accent) !important;
+}
+
+/* Bar chart area */
+[data-theme="light"] .bg-space-900\/80 {
+    background: linear-gradient(180deg, #ede9fe 0%, #ddd6fe 100%) !important;
+    border-color: rgba(109, 94, 243, 0.2) !important;
+}
+
+/* Chart label "Active Engagements (Monthly)" */
+[data-theme="light"] .bg-space-900\/80 .text-slate-500,
+[data-theme="light"] .bg-space-900\/80 .font-mono {
+    color: #7c6dd4 !important;
+}
+
+/* Chart month labels (JAN, FEB, MAR…) */
+[data-theme="light"] .text-slate-500.font-bold.font-mono {
+    color: #6d5ef3 !important;
+}
+
+/* Bar chart bars — deeper purple fill on light bg */
+[data-theme="light"] .bg-space-900\/80 [class*="bg-accent-purple"] {
+    background-color: rgba(109, 94, 243, 0.5) !important;
+    border-color: #6d5ef3 !important;
+}
+[data-theme="light"] .bg-space-900\/80 [class*="bg-accent-purple"]:hover {
+    background-color: rgba(109, 94, 243, 0.75) !important;
+}
+
+/* ============================================================
+   ABOUT PAGE — FOUNDER CARD — LIGHT MODE FIX
+   The card uses an inline background: rgba(15,23,42,0.95) which
+   stays dark. In light mode we override it to a soft purple-white
+   card and make the profession text dark & readable.
+   ============================================================ */
+
+[data-theme="light"] .founder-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f5f3ff 100%) !important;
+    border-color: rgba(109, 94, 243, 0.35) !important;
+    box-shadow: 0 8px 30px rgba(109, 94, 243, 0.15) !important;
+}
+
+/* Profession text: was rgba(255,255,255,0.65) — invisible on light bg */
+[data-theme="light"] .founder-role {
+    color: #475569 !important;
+}
+
+/* ============================================================
+   PROGRAMS PAGE — HERO SECTION — RESPONSIVE HEIGHT
+   Replaces the hardcoded h-[60vh] Tailwind class to prevent
+   image cropping on desktop/large screens.
+   ============================================================ */
+
+.programs-hero {
+    min-height: 75vh;
+}
+
+@media (min-width: 1280px) {
+    .programs-hero {
+        min-height: 80vh;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    .programs-hero {
+        min-height: 65vh;
+        padding-top: 120px !important;
+        padding-bottom: 60px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .programs-hero {
+        min-height: 55vh;
+    }
+}
+
+/* Override the global max-1024px hero reducer for programs page */
+@media (max-width: 1024px) {
+    .programs-hero {
+        min-height: 65vh !important;
+        height: auto !important;
+        padding-top: 120px !important;
+        padding-bottom: 60px !important;
+    }
+}
+
+/* ============================================================
+   PRICING PAGE — INTERACTIVE MAP CARD — LIGHT MODE FIX
+   The map card has a bg-space-900/75 dark photo overlay that
+   intentionally stays dark. Text inside must remain white in
+   both dark and light modes.
+   ============================================================ */
+
+/* The glass container holding the map must not get a light background */
+[data-theme="light"] .h-auto.glass.rounded-\[3rem\] {
+    background: transparent !important;
+}
+
+/* All text inside the dark-card map overlay stays white */
+[data-theme="light"] .dark-card h4,
+[data-theme="light"] .dark-card h4 span,
+[data-theme="light"] .dark-card p {
+    color: #ffffff !important;
+}
+
+/* text-white/80 paragraph — stays white with opacity */
+[data-theme="light"] p.text-white\/80,
+[data-theme="light"] p[class*="text-white"] {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Keep the dark overlay on the map image dark in light mode too */
+[data-theme="light"] .bg-space-900\/75 {
+    background-color: rgba(15, 23, 42, 0.75) !important;
+}
+[data-theme="light"] .bg-space-900\/65 {
+    background-color: rgba(15, 23, 42, 0.65) !important;
+}
+
+/* ============================================================
+   BLOG PAGE — CTA SECTION — LIGHT MODE FIX
+   The CTA has a dark photo + gradient overlay that intentionally
+   stays dark. All text inside the dark-card must stay white.
+   ============================================================ */
+
+/* Keep the space-900 gradient overlay dark in light mode */
+[data-theme="light"] .bg-gradient-to-r.from-space-900,
+[data-theme="light"] [class*="from-space-900"] {
+    --tw-gradient-from: rgba(15, 23, 42, 1) !important;
+}
+
+/* CTA heading stays white */
+[data-theme="light"] .dark-card h2,
+[data-theme="light"] .dark-card h2 span.text-accent-purple {
+    color: #ffffff !important;
+}
+
+/* accent span inside CTA heading stays purple */
+[data-theme="light"] .dark-card h2 span {
+    color: #6d5ef3 !important;
+}
+
+/* CTA paragraph (text-white/80) stays visible */
+[data-theme="light"] .dark-card p.text-white\/80,
+[data-theme="light"] .dark-card p[class*="text-white"] {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* ============================================================
+   CONTACT PAGE — MAP SECTION — LIGHT MODE FIX
+   The bg-space-900/10 overlay darkens the Google Maps iframe
+   in light mode, hiding "Houston, TX" labels and map UI.
+   Remove the dark tint in light mode so the map is fully readable.
+   ============================================================ */
+
+/* Remove dark tint over the map iframe in light mode */
+[data-theme="light"] .bg-space-900\/10 {
+    background-color: transparent !important;
+}
+
+/* Floating map card — text stays dark on light glass background */
+[data-theme="light"] .absolute.top-1\/2.glass h5 {
+    color: var(--text-main) !important;
+}
+[data-theme="light"] .absolute.top-1\/2.glass p {
+    color: #475569 !important;
+}
+
+/* ============================================================
+   HOME 1 & HOME 2 — HERO SECTION — RESPONSIVE HEIGHT & CROPPING
+   Replaces the hardcoded min-h-screen Tailwind class to prevent
+   excessive image cropping on mobile displays.
+   ============================================================ */
+
+.home-hero {
+    min-height: 100vh;
+}
+
+@media (max-width: 767px) {
+    .home-hero {
+        min-height: 70vh !important;
+        padding-top: 110px !important;
+        padding-bottom: 50px !important;
+    }
+}
+
+/* ============================================================
+   ABOUT PAGE — HERO SECTION — RESPONSIVE HEIGHT & CROPPING
+   Replaces the hardcoded h-[60vh] Tailwind class to prevent
+   excessive image cropping on mobile displays.
+   ============================================================ */
+
+.about-hero {
+    min-height: 60vh;
+}
+
+@media (max-width: 767px) {
+    .about-hero {
+        min-height: 45vh !important;
+        height: auto !important;
+        padding-top: 110px !important;
+        padding-bottom: 50px !important;
+    }
+}
 
