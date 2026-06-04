@@ -16,13 +16,13 @@
 }
 
 [data-theme="light"] {
-    --primary: #ffffff;
-    --secondary: #f8fafc;
-    --section-bg: #ffffff;
+    --primary: #f1f5f9;
+    --secondary: #ffffff;
+    --section-bg: #f8fafc;
     --accent: #6d5ef3;
     --accent-dark: #5849d6;
     --glass-bg: rgba(255, 255, 255, 0.95);
-    --glass-border: rgba(109, 94, 243, 0.3);
+    --glass-border: rgba(109, 94, 243, 0.25);
     --text-main: #0f172a;
     --text-muted: #334155;
     --gradient-end: #4f46e5; /* Deeper indigo for light mode */
@@ -59,7 +59,7 @@ p {
 }
 
 [data-theme="light"] body {
-    background-color: #ffffff;
+    background-color: #f1f5f9;
 }
 
 /* Glassmorphism */
@@ -679,7 +679,8 @@ body.light .btn-premium:not(.btn-primary):hover i {
     color: #ffffff !important;
 }
 [data-theme="light"] .dark-card .text-slate-300,
-[data-theme="light"] .dark-card .text-slate-400 {
+[data-theme="light"] .dark-card .text-slate-400,
+[data-theme="light"] .dark-card p:not(.text-accent-purple):not(.text-emerald-400):not(.text-pink-500):not(.hero-text) {
     color: rgba(255, 255, 255, 0.75) !important;
 }
 
@@ -689,7 +690,8 @@ body.light .btn-premium:not(.btn-primary):hover i {
     color: #ffffff !important;
 }
 [data-theme="light"] .catalog-show-card .text-slate-300,
-[data-theme="light"] .catalog-show-card .text-slate-400 {
+[data-theme="light"] .catalog-show-card .text-slate-400,
+[data-theme="light"] .catalog-show-card p:not(.text-accent-purple):not(.text-emerald-400):not(.text-pink-500):not(.hero-text) {
     color: rgba(255, 255, 255, 0.75) !important;
 }
 
@@ -860,11 +862,11 @@ body.light #mobile-menu {
 }
 
 [data-theme="light"] .stars {
-    opacity: 0.08;
+    opacity: 0.25;
     filter: invert(1);
 }
 [data-theme="light"] .twinkling {
-    opacity: 0.05;
+    opacity: 0.15;
     filter: invert(1);
 }
 
@@ -1124,14 +1126,9 @@ body.light #mobile-menu {
 
     .programs-right-col {
         grid-column: 1 / -1;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 1rem;
-    }
-
-    /* Last side card spans both cols on tablet if odd */
-    .programs-side-card:last-child {
-        grid-column: 1 / -1;
     }
 
     .programs-side-img {
@@ -1302,7 +1299,8 @@ body.light #mobile-menu {
 [data-theme="light"] .dark-card h3 {
     color: #ffffff !important;
 }
-[data-theme="light"] .dark-card p {
+[data-theme="light"] .dark-card p,
+[data-theme="light"] .dark-card p:not(.text-accent-purple):not(.text-emerald-400):not(.text-pink-500):not(.hero-text) {
     color: rgba(255, 255, 255, 0.75) !important;
 }
 [data-theme="light"] .dark-card span:not(.bg-accent-purple) {
@@ -1510,8 +1508,8 @@ body.light #mobile-menu {
 }
 
 /* CTA paragraph (text-white/80) stays visible */
-[data-theme="light"] .dark-card p.text-white\/80,
-[data-theme="light"] .dark-card p[class*="text-white"] {
+[data-theme="light"] .dark-card p.text-white\/80:not(.text-accent-purple):not(.text-emerald-400):not(.text-pink-500):not(.hero-text),
+[data-theme="light"] .dark-card p[class*="text-white"]:not(.text-accent-purple):not(.text-emerald-400):not(.text-pink-500):not(.hero-text) {
     color: rgba(255, 255, 255, 0.85) !important;
 }
 
