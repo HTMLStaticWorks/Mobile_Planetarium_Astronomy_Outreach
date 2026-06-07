@@ -1418,18 +1418,22 @@ body.light #mobile-menu {
    ============================================================ */
 
 .programs-hero {
-    min-height: 75vh;
+    /* image is 2560x1024 (~2.5:1 ratio); at 1536px wide = 614px tall.
+       Use a generous min-height so the sky shows in full on any desktop. */
+    min-height: 44vw; /* scales proportionally with viewport width */
+    max-height: 90vh; /* cap on very large monitors */
 }
 
 @media (min-width: 1280px) {
     .programs-hero {
-        min-height: 80vh;
+        min-height: 42vw;
+        max-height: 88vh;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1279px) {
     .programs-hero {
-        min-height: 65vh;
+        min-height: 45vw;
         padding-top: 120px !important;
         padding-bottom: 60px !important;
     }
@@ -1437,14 +1441,14 @@ body.light #mobile-menu {
 
 @media (max-width: 767px) {
     .programs-hero {
-        min-height: 55vh;
+        min-height: 60vw;
     }
 }
 
 /* Override the global max-1024px hero reducer for programs page */
 @media (max-width: 1024px) {
     .programs-hero {
-        min-height: 65vh !important;
+        min-height: 50vw !important;
         height: auto !important;
         padding-top: 120px !important;
         padding-bottom: 60px !important;
