@@ -1574,3 +1574,46 @@ body.light #mobile-menu {
     }
 }
 
+/* ============================================================
+   PRICING PAGE — Interactive Map Section Contrast Fix
+   The map card always has a dark photo overlay (bg-space-900/75),
+   so text inside .map-card-content must remain white in ALL themes.
+   ============================================================ */
+
+/* Service Radius description paragraph — adapts to theme */
+.map-section-desc {
+    color: #cbd5e1; /* slate-300 — readable on dark section-bg */
+}
+[data-theme="light"] .map-section-desc {
+    color: #475569 !important; /* slate-600 — readable on light section-bg */
+}
+
+/* Map card inner content — always sits on a dark overlay, must stay white */
+.map-card-content,
+.map-card-content h4,
+.map-card-content p,
+.map-card-content span:not(.text-accent-purple) {
+    color: #ffffff !important;
+}
+
+.map-card-desc {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Light mode must NOT override these — the overlay stays dark in both modes */
+[data-theme="light"] .map-card-content,
+[data-theme="light"] .map-card-content h4,
+[data-theme="light"] .map-card-content p,
+[data-theme="light"] .map-card-content span:not(.text-accent-purple) {
+    color: #ffffff !important;
+}
+
+[data-theme="light"] .map-card-desc {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Slightly stronger scrim in light mode for better readability */
+[data-theme="light"] #map-overlay {
+    background-color: rgba(15, 23, 42, 0.82) !important;
+}
+

@@ -129,7 +129,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <div class="fade-up">
                         <h2 class="text-4xl font-bold mb-6">Service <span class="text-accent-purple">Radius</span></h2>
-                        <p class="text-slate-300 text-lg mb-8">We are based in Houston but travel across the state. Check our service distance cards below for travel fees.</p>
+                        <p class="text-lg mb-8 map-section-desc">We are based in Houston but travel across the state. Check our service distance cards below for travel fees.</p>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <!-- Zone 1 -->
                             <div class="glass p-6 rounded-2xl flex flex-col items-center text-center gap-4 hover:border-accent-purple transition-all duration-300 shadow-lg group">
@@ -167,15 +167,15 @@
                         </div>
                     </div>
                     <div class="fade-up relative">
-                        <div class="h-auto glass rounded-[3rem] border border-white/10 flex items-center justify-center p-12 relative overflow-hidden group">
+                        <div id="interactive-map-card" class="h-auto glass rounded-[3rem] border border-white/10 flex items-center justify-center p-12 relative overflow-hidden group">
                              <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=1200" alt="Texas Map" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700">
-                             <div class="absolute inset-0 bg-space-900/75 group-hover:bg-space-900/65 transition-all duration-300"></div>
-                             <div class="relative text-center p-8 z-10 dark-card">
+                             <div id="map-overlay" class="absolute inset-0 bg-space-900/75 group-hover:bg-space-900/65 transition-all duration-300"></div>
+                             <div class="relative text-center p-8 z-10 dark-card map-card-content">
                                  <div class="w-20 h-20 bg-accent-purple/20 rounded-full flex items-center justify-center mx-auto mb-6 glow-purple">
                                      <i class="fas fa-location-dot text-4xl text-accent-purple"></i>
                                  </div>
-                                 <h4 class="text-3xl font-bold mb-4 text-white">Interactive <span class="text-accent-purple">Map</span></h4>
-                                 <p class="text-white/80 max-w-sm mx-auto mb-8">Currently serving the greater Houston area and surrounding counties within a 150-mile radius.</p>
+                                 <h4 class="text-3xl font-bold mb-4">Interactive <span class="text-accent-purple">Map</span></h4>
+                                 <p class="max-w-sm mx-auto mb-8 map-card-desc">Currently serving the greater Houston area and surrounding counties within a 150-mile radius.</p>
                                  <button class="btn-premium btn-primary rounded-full px-8 py-3">Calculate Distance</button>
                              </div>
                         </div>
